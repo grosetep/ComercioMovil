@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context="estrategiamovil.comerciomovil.ui.fragments.FindBusinessFragment">
+
+<ProgressBar
+    android:id="@+id/pbLoading_business"
+    android:visibility="invisible"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/change_ads_container"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/change_category_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:layout_weight="50"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/icon_layout__location_size"
+                android:layout_height="@dimen/icon_layout__location_size"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:clickable="false"
+                android:src="@drawable/ic_action_search"
+                android:background="@drawable/shape_icon_green"/>
+
+            <TextView
+                android:id="@+id/text_change_category"
+                android:layout_width="match_parent"
+                android:gravity="left|center_vertical"
+                android:text="@string/text_promt_category"
+                android:clickable="false"
+                android:textColor="@color/gray"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+        android:id="@+id/change_city_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="50"
+        android:padding="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/image_change_location"
+            android:layout_width="@dimen/icon_layout__location_size"
+            android:layout_height="@dimen/icon_layout__location_size"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:clickable="false"
+            android:src="@drawable/ic_person_pin_circle"
+            android:background="@drawable/shape_icon_blue"/>
+
+        <TextView
+            android:id="@+id/text_change_state"
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:text="@string/text_location_title_2"
+            android:clickable="false"
+            android:textColor="@color/gray"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/search_by_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_below="@+id/change_ads_container"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="@dimen/icon_layout__location_size"
+            android:layout_height="@dimen/icon_layout__location_size"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:clickable="false"
+            android:src="@drawable/ic_action_filter"
+            android:background="@drawable/shape_icon_yellow"/>
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/mainLayout"
+                        android:descendantFocusability="beforeDescendants"
+                        android:focusableInTouchMode="true" >
+            <AutoCompleteTextView
+                android:id="@+id/text_filter"
+                android:layout_width="match_parent"
+                android:gravity="left|center_vertical"
+                android:hint="@string/promt_category_search_3"
+                android:textColor="@color/gray"
+                android:inputType="textCapWords"
+                android:background="@android:color/transparent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_height="match_parent"
+                android:ems="10"/>
+            <ImageView
+                android:id="@+id/image_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:tint="@color/colorAccent"
+                android:layout_alignRight="@+id/text_filter"
+                android:src="@drawable/ic_action_search"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/search_by_filter"
+        android:background="@color/gray_ligth" />
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:scrollbarThumbVertical="@drawable/scrolling"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="true"
+    android:layout_below="@+id/divider"
+    android:scrollbarSize="4dp"/>
+
+    <include layout="@layout/no_results_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_centerInParent="true"
+             android:layout_below="@+id/divider"/>
+    <include layout="@layout/no_connection_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_centerInParent="true"
+             android:layout_below="@+id/divider"/>
+</RelativeLayout>
+

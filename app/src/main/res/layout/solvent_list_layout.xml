@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="6dp"
+    android:layout_marginBottom="16dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/photo_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="@dimen/item_profile_selected"
+            android:src="@drawable/ic_cloud"
+            android:contentDescription="@string/action_settings"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/cover_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/colorPrimaryDobleDark"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Negocio"
+            android:layout_below="@+id/photo_ads"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingBottom="8dp"
+            android:layout_below="@+id/cover_ads"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/negro_semitransparente"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Desde: "
+
+
+                />
+            <TextView
+                android:id="@+id/text_ads_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="100"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="estrategiamovil.comerciomovil.ui.fragments.DetailAdsFragment">
+
+
+
+    <LinearLayout
+        android:id="@+id/principal_container_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            android:layout_marginTop="@dimen/card_margin">
+            <!--                                            Info General -->
+            <LinearLayout
+                style="@style/Widget.CardContent"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+
+                <!-- Email Label -->
+                <LinearLayout android:id="@+id/layout_email"
+                    android:layout_width="match_parent" android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_height="match_parent" android:clickable="true" android:background="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:tint="@color/colorPrimary"
+                         android:layout_marginRight="8dp"
+                         android:clickable="false"
+                         android:src="@drawable/ic_email"/>
+
+                    <TextView
+                        android:id="@+id/text_merchant_email"
+                        android:textColor="@color/negro_semitransparente"
+                        android:layout_width="match_parent"
+                        android:clickable="false"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <!-- Tel Label -->
+                <LinearLayout android:id="@+id/layout_phone" android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent" android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_height="match_parent" android:clickable="true"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:tint="@color/colorPrimary"
+                        android:layout_marginRight="8dp"
+                        android:clickable="false"
+                        android:src="@drawable/ic_perm_phone_msg"/>
+
+                    <TextView
+                        android:id="@+id/text_merchant_phone"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/negro_semitransparente"
+                        android:clickable="false"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <!-- Web Label -->
+                <LinearLayout android:id="@+id/layout_web" android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent" android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_height="match_parent" android:clickable="true"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:tint="@color/colorPrimary"
+                        android:layout_marginRight="8dp"
+                        android:clickable="false"
+                        android:src="@drawable/ic_desktop_mac"/>
+
+                    <TextView
+                        android:id="@+id/text_merchant_web"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/negro_semitransparente"
+                        android:clickable="false"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <!-- Locations Label -->
+                <LinearLayout android:id="@+id/layout_locations" android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent" android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_height="match_parent" android:clickable="false"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:tint="@color/colorPrimary"
+                        android:layout_marginRight="8dp"
+                        android:clickable="false"
+                        android:src="@drawable/ic_map"/>
+                    <LinearLayout
+                        android:id="@+id/location_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+</ScrollView>

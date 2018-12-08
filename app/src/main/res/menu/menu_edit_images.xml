@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_edit_images" android:title="@string/action_edit_publication"
+          android:orderInCategory="100" app:showAsAction="always" android:icon="@drawable/ic_mode_edit" />
+    <item android:id="@+id/action_remove_images" android:title="@string/text_button_reset"
+          android:orderInCategory="101" app:showAsAction="always" android:icon="@drawable/ic_action_trash" />
+</menu>

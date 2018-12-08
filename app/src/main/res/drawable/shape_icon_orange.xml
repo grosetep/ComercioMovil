@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:startColor="@color/colorAccent"
+        android:endColor="@color/colorAccent"
+        android:angle="45"/>
+    <padding android:left="7dp"
+        android:top="7dp"
+        android:right="7dp"
+        android:bottom="7dp" />
+    <corners android:radius="8dp" />
+</shape> -->
+    <!-- FFFF0000 -->
+    <!--80FF00FF , end:#ff7600, start:#ff8000-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+               android:shape="oval">
+            <gradient
+                android:startColor="@color/colorClickable"
+                android:endColor="@color/colorClickable"
+                android:angle="45"/>
+            <padding android:left="7dp"
+                     android:top="7dp"
+                     android:right="7dp"
+                     android:bottom="7dp" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+               android:shape="oval">
+            <gradient
+                android:startColor="@color/colorAccent"
+                android:endColor="@color/colorAccent"
+                android:angle="45"/>
+            <padding android:left="7dp"
+                     android:top="7dp"
+                     android:right="7dp"
+                     android:bottom="7dp" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</selector>

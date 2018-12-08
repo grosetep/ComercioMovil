@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             style="?android:actionButtonStyle"
+             android:id="@+id/actionbar_close"
+             android:layout_width="fill_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="1">
+
+    <TextView style="?android:actionBarTabTextStyle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:paddingRight="20dp"
+              android:drawablePadding="8dp"
+              android:textColor="@color/white"
+              android:textSize="16sp"
+              android:gravity="center_vertical"
+              android:text="@string/close" />
+</FrameLayout>

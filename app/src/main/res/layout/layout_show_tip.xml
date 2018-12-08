@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/negro"
+        android:padding="16dp"
+        />
+    <TextView
+        android:id="@+id/text_error"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:padding="16dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox_show_tip"
+        android:layout_width="match_parent"
+        android:textColorLink="@color/colorAccent"
+        android:text="No mostrar de nuevo"
+        android:textColor="@color/negro"
+        android:paddingLeft="16dp"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/button_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:text="@string/promt_button_show_tip_image"/>
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="estrategiamovil.comerciomovil.ui.activities.MainActivity">
+<!--    android:fitsSystemWindows="true" , toolbar se mantine visible debajo de la barra del sistema cuando hay scroll y la barra de sistema se mantiene visible tambien-->
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+           /><!-- se esconde cuando hay scroll-->
+
+
+
+        <!-- Hacer scroll en app bar opctions app:tabGravity="fill"
+        app:tabMode="scrollable" android:overScrollMode="never" app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@style/TabTextAppearance"
+            style="@style/TabLayoutStyle"-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            style="@style/MyCustomTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="scrollable"
+            android:overScrollMode="never"
+             /><!-- SE mantiene fija cuando hay scroll y toolbar si se esconde -->
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fav_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="visible"
+        fab:menu_fab_size="normal"
+        fab:menu_showShadow="true"
+        fab:menu_shadowColor="@color/menu_shadowColor"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="3dp"
+        fab:menu_colorNormal="@color/colorNormal"
+        fab:menu_colorPressed="@color/colorPressed"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_animationDelayPerItem="100"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_style="@style/MenuLabelsStyle"
+        fab:menu_labels_position="left"
+        fab:menu_openDirection="up"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_fab_label="@string/action_floating_menu"
+        fab:menu_fab_show_animation="@anim/jump_from_down"
+        fab:menu_fab_hide_animation="@anim/hide_to_bottom"
+        android:layout_gravity="right|bottom">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fav_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_document"
+            fab:fab_size="mini"
+            fab:fab_colorNormal="@color/colorNormal"
+            fab:fab_colorPressed="@color/colorPressed"
+            fab:fab_colorRipple="#99FFFFFF"
+            fab:fab_label="@string/action_admin" />
+
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fav_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_heart_white"
+        fab:fab_colorNormal="@color/colorNormal"
+        fab:fab_colorPressed="@color/colorPressed"
+        fab:fab_colorRipple="#99FFFFFF"
+        fab:fab_size="mini"
+        android:visibility="visible"
+        fab:fab_label="@string/action_favorites" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fav_purchases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_shopping_cart"
+        fab:fab_colorNormal="@color/colorNormal"
+        fab:fab_colorPressed="@color/colorPressed"
+        fab:fab_colorRipple="#99FFFFFF"
+        fab:fab_size="mini"
+        android:visibility="visible"
+        fab:fab_label="@string/action_purchase" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fav_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_local_shipping"
+        android:visibility="visible"
+        fab:fab_colorNormal="@color/colorNormal"
+        fab:fab_colorPressed="@color/colorPressed"
+        fab:fab_colorRipple="#99FFFFFF"
+        fab:fab_size="mini"
+        fab:fab_label="@string/action_orders" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fav_customers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_people"
+        android:visibility="visible"
+        fab:fab_colorNormal="@color/colorNormal"
+        fab:fab_colorPressed="@color/colorPressed"
+        fab:fab_colorRipple="#99FFFFFF"
+        fab:fab_size="mini"
+        fab:fab_label="@string/action_customers" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fav_publishing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_star_border"
+        android:visibility="visible"
+        fab:fab_colorNormal="@color/colorNormal"
+        fab:fab_colorPressed="@color/colorPressed"
+        fab:fab_colorRipple="#99FFFFFF"
+        fab:fab_size="mini"
+        fab:fab_label="@string/action_publish" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>

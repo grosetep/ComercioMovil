@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/item_image_publication_selected"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="6dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+              android:layout_width="match_parent"
+        android:background="@color/white"
+              android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_cloud"
+            android:contentDescription="@string/action_settings"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"/>
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkbox_image"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/white_semitransparent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

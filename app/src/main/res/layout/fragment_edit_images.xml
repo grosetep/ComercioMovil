@@ -1,0 +1,82 @@
+<LinearLayout android:layout_below="@id/appbar" android:background="@android:color/white"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent" android:orientation="vertical"
+             android:layout_height="match_parent"
+              android:weightSum="50"
+             tools:context="estrategiamovil.comerciomovil.ui.fragments.EditImagesFragment">
+<!-- titulo -->
+    <TextView
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_height="wrap_content"
+        android:text="@string/promt_publication_images_title"
+        android:textColor="@color/colorPrimaryDark"/>
+    <!-- lista -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="50"
+        android:layout_height="match_parent">
+
+
+        <!-- images -->
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            tools:context="estrategiamovil.comerciomovil.ui.activities.AskResponseActivity">
+
+            <ProgressBar
+                android:id="@+id/pbLoading_images"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_edit_images"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:scrollbarThumbVertical="@drawable/scrolling"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="true"
+                android:scrollbarSize="4dp"
+                android:padding="8dp"/>
+
+        </RelativeLayout>
+
+
+
+
+</FrameLayout>
+
+
+<!-- boton -->
+    <LinearLayout android:id="@+id/layout_change_images"
+              android:padding="16dp"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_continue"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:text="@string/promt_button_continue"
+            android:background="@drawable/rounded_border_button"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
+

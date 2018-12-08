@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_shipping" android:title="@string/action_shipping"
+          android:orderInCategory="100" app:showAsAction="never"  />
+    <item android:id="@+id/action_view_voucher" android:title="@string/action_view_voucher"
+          android:orderInCategory="101" app:showAsAction="never"  />
+</menu>

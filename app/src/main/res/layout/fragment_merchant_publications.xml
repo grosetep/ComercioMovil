@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="true">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout
+            android:id="@+id/layout_image"
+            android:background="@drawable/gradient_blue_ligth"
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+
+            <ImageView
+                android:id="@+id/header_imageview_merchant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gradient_blue_ligth"
+                android:adjustViewBounds="true"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/merchant_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/layout_image"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="0dp">
+
+
+            <TextView
+                android:id="@+id/text_bussiness_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textStyle="normal"
+                android:textColor="@color/negro_semitransparente"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="0dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+
+            <TextView
+                android:id="@+id/text_bussiness_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="categoria"
+                android:textStyle="normal"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="4dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+            <TextView
+                android:id="@+id/text_bussiness_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado"
+                android:textStyle="normal"
+                android:textColor="@color/negro_semitransparente"
+                android:layout_marginBottom="0dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+
+        </LinearLayout>
+
+
+        <!-- cheat code: negative margin -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_profile_merchant"
+            android:layout_width="@dimen/item_profile_selected"
+            android:layout_height="@dimen/item_profile_selected"
+            android:src="@drawable/ic_account_circle"
+            android:tintMode="add"
+            android:tint="@android:color/holo_blue_light"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/merchant_info_container"
+            android:layout_marginBottom="-24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/merchant_info_container"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/AppBarOverlay">
+
+                <!-- Hacer scroll en app bar opctions app:tabGravity="fill"
+                app:tabMode="scrollable" android:overScrollMode="never" app:tabSelectedTextColor="@color/colorAccent"
+                    app:tabTextAppearance="@style/TabTextAppearance"
+                    style="@style/TabLayoutStyle"-->
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabs"
+                    style="@style/TabLayoutMerchantPubs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabGravity="fill"
+                    android:overScrollMode="always"
+                    app:tabMode="scrollable"
+                    />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="always"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            </LinearLayout>
+            </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

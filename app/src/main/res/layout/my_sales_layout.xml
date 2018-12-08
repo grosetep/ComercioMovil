@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    card_view:cardCornerRadius="4dp"
+    android:foreground="?android:attr/selectableItemBackground">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/layout_data"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/list_item_image_size"
+                android:layout_height="@dimen/list_item_image_size"
+                android:scaleType="centerCrop"
+                android:gravity="center"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="4dp"
+                android:layout_gravity="center|center_vertical"
+                android:orientation="vertical">
+                <!-- coverDescription-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    ><!-- android:weightSum="50" -->
+
+                    <TextView
+                        android:id="@+id/text_coverDescription"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Boleto para obra chico conoce chica desde $244"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:orientation="vertical" android:layout_below="@+id/layout_data" android:padding="8dp"
+            android:layout_height="wrap_content">
+
+            <!-- data 1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_promt_capture_line"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_weight="50"
+                        />
+                    <TextView
+                        android:id="@+id/text_capture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:layout_weight="50"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="1233423411243"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_promt_total_sale"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_weight="50"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_weight="50"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="$800"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_promt_total_commission"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_weight="50"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_commission"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_weight="50"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_promt_net"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_weight="50"/>
+                    <TextView
+                        android:id="@+id/text_net"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_green_light"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_weight="50"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_promt_payer"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_weight="50"
+                        />
+                    <TextView
+                        android:id="@+id/text_payer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Juan Perez X."
+                        android:layout_weight="50"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- data 2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="100">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_promt_payment_method"/>
+                    <TextView
+                        android:id="@+id/text_payment_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Mercado Pago"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="100">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_promt_num_items"/>
+                    <TextView
+                        android:id="@+id/text_num_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="4"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="100">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_prompt_date_operation"/>
+                    <TextView
+                        android:id="@+id/text_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="12/12/2016 04:00"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="100">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_prompt_days_created"/>
+                    <TextView
+                        android:id="@+id/text_days"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="100">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_prompt_money_relase"/>
+                    <TextView
+                        android:id="@+id/text_money_release"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent" android:weightSum="100"
+                    android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_prompt_shipping_status"/>
+                    <TextView
+                        android:id="@+id/text_shipping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text=""/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent" android:weightSum="100"
+                    android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_prompt_receive_status"/>
+                    <TextView
+                        android:id="@+id/text_receive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:weightSum="100"
+                    android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_prompt_list_cupons"/>
+                    <TextView
+                        android:id="@+id/text_cupons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text=""/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_voucher"
+                    android:layout_width="match_parent" android:weightSum="100"
+                    android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/negro_semitransparente"
+                        android:text="@string/text_prompt_voucher_status"/>
+                    <TextView
+                        android:id="@+id/text_voucher"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text=""/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- label -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text_status_payment_green"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="4dp"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/label_status_payment"
+                    android:text="Aprobado"/>
+                <TextView
+                    android:id="@+id/text_status_payment_red"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="4dp"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/label_status_payment_red"
+                    android:text=""/>
+                <TextView
+                    android:id="@+id/text_status_payment_orange"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="4dp"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/label_status_payment_orange"
+                    android:text="Pendiente"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/overflow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_gravity="end|top"
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        android:tint="@color/negro_semitransparente"
+        android:src="@drawable/ic_more_vert" />
+</android.support.v7.widget.CardView>

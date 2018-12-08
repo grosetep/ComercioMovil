@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_below="@+id/appbar"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:orientation="vertical"
+        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:text="@string/action_filter_dates"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:weightSum="1">
+                <!-- date 1-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:tint="@color/gray"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_date_range"/>
+
+                    <EditText android:id="@+id/text_date_from"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:inputType="date"
+                              android:singleLine="true"
+                              android:textColorHint="@color/gray"
+                              android:textColor="@color/negro"
+                              android:clickable="true"
+                              android:cursorVisible="false"
+                              android:focusable="false"
+                              android:focusableInTouchMode="false"
+                              android:isScrollContainer="true"
+                              android:hint="@string/prompt_date_from"/>
+
+                </LinearLayout>
+                <!--date 2-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:tint="@color/gray"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_date_range"/>
+
+                    <EditText android:id="@+id/text_date_to"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:inputType="date"
+                              android:singleLine="true"
+                              android:textColorHint="@color/gray"
+                              android:textColor="@color/negro"
+                              android:clickable="true"
+                              android:cursorVisible="false"
+                              android:focusable="false"
+                              android:focusableInTouchMode="false"
+                              android:isScrollContainer="true"
+                              android:hint="@string/prompt_date_to"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/gray_ligth" />
+        <TextView
+            android:layout_width="match_parent"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:text="@string/action_filter_capture_line"
+            android:textColor="@color/colorPrimaryDark"/>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:weightSum="1">
+            <!-- date 1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tint="@color/gray"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_announcement"/>
+
+                <EditText android:id="@+id/text_capture_line"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:inputType="number"
+                          android:singleLine="true"
+                          android:textColorHint="@color/gray"
+                          android:textColor="@color/negro"
+                          android:clickable="true"
+                          android:hint="@string/prompt_capture_line"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/gray_ligth" />
+        <LinearLayout
+            android:layout_width="match_parent"  android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/check_filter"
+                android:text="@string/promt_no_filters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent" android:padding="16dp"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/button_accept"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border_button_accent"
+                    android:textColor="@color/white"
+                    android:text="@string/action_apply_filters"/>
+            </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+

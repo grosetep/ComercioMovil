@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar
+        android:id="@+id/pbLoading_products"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/change_products_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="@dimen/icon_layout__location_size"
+            android:layout_height="@dimen/icon_layout__location_size"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:clickable="false"
+            android:src="@drawable/ic_action_search"
+            android:background="@drawable/shape_icon_green"/>
+
+        <TextView
+            android:id="@+id/text_change_category"
+            android:layout_width="match_parent"
+            android:gravity="left|center_vertical"
+            android:text="@string/promt_category_search"
+            android:clickable="false"
+            android:textColor="@color/gray"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/change_products_container"
+        android:background="@color/gray_ligth" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/swipeRefresh_products"
+          android:layout_below="@+id/divider"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cardList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:scrollbarThumbVertical="@drawable/scrolling"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="true"
+            android:scrollbarSize="4dp"
+            />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <include layout="@layout/no_publications_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_centerInParent="true"
+             android:layout_below="@+id/divider"/>
+
+    <include layout="@layout/no_connection_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_centerInParent="true"
+             android:layout_below="@+id/divider"/>
+</RelativeLayout>

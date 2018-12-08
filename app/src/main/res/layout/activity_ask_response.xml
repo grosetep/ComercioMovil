@@ -1,0 +1,94 @@
+<android.support.design.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" android:fitsSystemWindows="true"
+tools:context="estrategiamovil.comerciomovil.ui.activities.AskResponseActivity">
+
+<RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_asks"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <LinearLayout android:id="@+id/layout_asks" android:layout_below="@id/appbar" android:background="@android:color/white"
+                  android:layout_width="match_parent" android:orientation="vertical"
+                  android:layout_height="wrap_content" >
+        <!-- questions list -->
+        <FrameLayout
+            android:layout_below="@+id/appbar"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="50"
+            android:layout_height="wrap_content">
+            <include layout="@layout/fragment_ask_response"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_ligth" />
+        <!-- send question -->
+        <LinearLayout android:id="@+id/layout_send_ask"
+                      android:layout_width="match_parent" android:orientation="horizontal"
+                      android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="50"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/text_send_ask_indicator"
+                    android:layout_gravity="bottom"
+                    android:paddingTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/action_send_ask"
+                    android:hint="@string/action_send_ask"
+                    android:textColor="@color/negro_semitransparente"
+                    android:textColorHint="@color/colorAccent"
+                    android:singleLine="true"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+
+                    android:isScrollContainer="true"/>
+</LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_send"
+                android:layout_gravity="center"
+                android:tint="@color/colorPrimaryDark"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

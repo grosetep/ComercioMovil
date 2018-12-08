@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config_release {
+            keyAlias 'ServiceCoupons'
+            keyPassword 'elcompayito2130'
+            storeFile file('C:/Estrategia Movil MX/producto/keystore/keystore_service_coupons_prod.jks')
+            storePassword 'elcompayito2130'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion '23.0.1'
+    defaultConfig {
+        applicationId "estrategiamovil.comerciomovil"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 26
+        versionName "2.1.6"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile('com.mercadopago:android-sdk:0.9.16@aar') { transitive = true }
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.mcxiaoke.volley:library:1.0.+'
+    compile 'com.google.code.gson:gson:2.3'
+    compile 'com.github.clans:fab:1.6.3'
+    compile 'com.github.bumptech.glide:glide:3.6.0'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.google.android.gms:play-services-maps:9.0.2'
+    compile 'com.google.android.gms:play-services-location:9.0.2'
+    compile 'com.google.firebase:firebase-messaging:9.0.0'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.scottyab:aescrypt:0.0.1'
+    compile 'com.github.aakira:expandable-layout:1.4.2@aar'
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.1.3'
+}
+apply plugin: 'com.google.gms.google-services'

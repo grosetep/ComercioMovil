@@ -1,0 +1,738 @@
+<resources>
+    <string name="app_name">WeeSpare</string>
+    <string name="app_message_splash">Descuentos en Productos y Servicios...</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- CardView toolbar options-->
+    <string name="action_settings">Ajustes</string>
+    <string name="action_private_terms">Aviso de privacidad</string>
+    <string name="action_disable">Desactivar</string>
+    <string name="action_edit_title">Cambiar Título</string>
+    <string name="action_edit_publication">Editar Publicación</string>
+    <string name="action_pause_publication">Pausar o Suspender</string>
+    <string name="action_activate_publication">ReActivar Publicación</string>
+    <string name="action_remove_publication">Eliminar Publicacion </string>
+    <string name="action_delete_fav">Quitar de favoritos</string>
+    <string name="action_subscribe">Suscribirme</string>
+    <string name="action_notify">Enviar notificación</string>
+    <string name="action_rate">Añadir Reseña</string>
+    <string name="action_receive">Recibí el producto/servicio</string>
+    <string name="action_shipping">Entregué el producto</string>
+    <string name="action_voucher">Subir Comprobante de Pago</string>
+    <string name="action_view_voucher">Ver Comprobante de Pago</string>
+    <string name="action_product_are_sent">Detalle de envío/entrega/canjeo:</string>
+    <string name="action_questions_reply">Responder preguntas</string>
+    <string name="action_questions_pending">Preguntas</string>
+    <string name="action_notify_reply">Responder</string>
+    <string name="action_send_ask">Escribe tu pregunta</string>
+    <string name="promt_no_response_yet">Respuesta pendiente</string>
+    <string name="action_unsubscribe">Des Suscribirme</string>
+
+    <!-- Prioridades -->
+    <string-array name="percentages">
+        <item>Seleccione...</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+        <item>80</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="category_text">Seleccione por cuales productos esta interesado:</string>
+    <string name="promt_category_search">Tipo producto...</string>
+    <string name="promt_category_search_3">Ej, dentista, cocina japonesa,..</string>
+    <string name="promt_all_categories">Todas las Categorias</string>
+    <string name="promt_all_subcategories">Todas</string>
+    <string name="promt_no_filters">Quitar filtros y consultar todas</string>
+    <!-- Opciones de Navigation Drawer -->
+    <string name="title_activity">Actividad</string>
+    <string name="action_session">Inicia Sesión o Regístrate</string>
+    <string name="action_singup">Regístrate</string>
+    <string name="action_edit_profile">Perfil</string>
+    <string name="action_club">Club WeeSpare</string>
+    <string name="action_help">Ayuda</string>
+    <string name="action_promotions">Promociones</string>
+    <string name="action_support">Soporte a clientes</string>
+    <string name="action_share">Compartir</string>
+    <string name="action_send">Email</string>
+    <string name="action_send_email">Envía</string>
+    <string name="action_filter_dates">Búsqueda por fechas</string>
+    <string name="action_filter_capture_line">Línea de captura</string>
+    <string name="action_apply_filters">Aplicar filtros</string>
+    <string name="promt_title_send_email">Contactar</string>
+    <string name="action_exit">Salir</string>
+    <string name="promt_yes">Si</string>
+    <string name="promt_no">No</string>
+    <string name="action_close">Cerrar Sesión</string>
+    <string name="action_buy">Comprar</string>
+    <string name="action_buy_disabled">Expirada</string>
+    <string name="prompt_cupons_suscription">No aplica</string>
+    <string name="prompt_suscription_status_title">Estado de tu Campaña</string>
+    <string name="prompt_fee_by_cupons">comisiones x venta de productos</string>
+    <string name="prompt_campaing_title">Crear una campaña (facebook,Google AdWords,etc,.)</string>
+    <string name="prompt_campaing_comming_soon">Disponible pronto...</string>
+    <!-- -->
+    <string name="prompt_button_approval_true">Aprobar</string>
+    <string name="prompt_button_approval_false">Rechazar</string>
+    <string name="prompt_text_comment">Comentario</string>
+    <string name="prompt_text_no_pending_publications">No hay publicaciones pendientes</string>
+
+    <!-- Opciones foating button menu -->
+    <string name="action_publish">Mis Publicaciones</string>
+    <string name="action_orders">Ventas</string>
+    <string name="action_customers">Mis Clientes</string>
+    <string name="action_purchase">Cupones Comprados</string>
+    <string name="action_floating_menu">Seleccione</string>
+    <string name="action_participate">Promociones</string>
+    <string name="action_find_business">Prestadores de Servicios</string>
+    <string name="action_admin">Administración</string>
+    <string name="action_favorites">Favoritos</string>
+    <string name="action_location">Cambiar Ubicación</string>
+    <string name="promt_drive_to">Conducir hacia allá</string>
+    <string name="promt_shipping_all_options">Permitir envios por paquetería (DHL, Estafeta,etc,.)</string>
+    <string name="promt_shipping_available_title">Tipos de entrega disponibles</string>
+    <string name="promt_shipping_to_home">Servicio a domicilio</string>
+    <string name="promt_shipping_on_store">Recoger en tienda</string>
+    <string name="promt_shipping_local">WeeSpare Envíos</string>
+    <string name="promt_shipping_nacional">Envío Nacional</string>
+    <string name="promt_shipping_free">Envío gratis</string>
+    <string name="promt_reviews_title">Opiniones sobre este producto</string>
+    <string name="promt_question_title">Preguntas</string>
+    <string name="promt_question_button">Preguntar</string>
+    <string name="promt_business_info">"Información de "</string>
+    <string name="promt_business_info_title">¿Quienes Somos?</string>
+    <string name="promt_business_info_hint">Descripción de mis Servicios</string>
+    <string name="promt_business_info_error">No hay información disponible</string>
+    <string name="promt_no_publications">Crea tu primera publicación aqui -></string>
+    <!-- Opciones toolbar -->
+    <string name="action_preferences">Preferencias</string>
+
+    <!-- Text Detail-->
+    <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue
+    cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian
+    bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
+    cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
+    the big cheese.</string>
+
+
+    <!-- Connection errors messages-->
+    <string name="generic_server_down">Ups, el servicio no esta disponible por el momento.</string>
+    <string name="no_internet">Verifique que tiene acceso a Internet y vuelva a intentar.</string>
+    <string name="no_connection">No hemos podido conectar con el Servidor, inténtalo nuevamente.</string>
+
+    <string name="generic_error">Servicio no disponible.</string>
+    <string name="generic_server_timeout">El servicio no esta disponible o puede estar experimentando problemas de conexión.</string>
+    <string name="auth_failed">Error de autenticación al conectarse.</string>
+    <string name="no_network_connection">Verifique que tiene señal de red</string>
+    <string name="validation_errors">Verifique la información</string>
+    <string name="parsing_failed">Error de procesamiendo de datos</string>
+    <!-- start -->
+    <string name="button_config">Iniciar</string>
+    <string name="text_config">Ayúdanos a configurar tus preferencias</string>
+
+    <!-- countries-->
+    <string name="search">Buscar país...</string>
+    <string name="selectCountry">Selecciona tu País</string>
+    <!-- cities-->
+    <string name="searchCity">Buscar Ciudad...</string>
+    <string name="selectCity">Selecciona tu Estado</string>
+    <!-- categories-->
+    <string name="selectCategory">¿ Cuales son tus intereses ?</string>
+    <string name="buttonOk">Listo</string>
+    <string name="promt_search_services">Buscar cupones...</string>
+
+    <!-- No publications found -->
+    <string name="promt_search">Buscar...</string>
+    <string name="nopublications">Por el momento no hay promociones</string>
+    <string name="title_activity_categories">Tus intereses</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_renombrar">renombrar</string>
+    <string name="title_activity_begin">BeginActivity</string>
+    <string name="promt_publications_not_found">No hay publicaciones por el momento</string>
+    <string name="promt_results_not_found">No se encontraron registros</string>
+
+    <!-- detail publication -->
+    <string name="text_description_title">Descripción detallada (largo)</string>
+    <string name="text_description_detail_title">Descripción</string>
+    <string name="text_important_title">Destacado</string>
+    <string name="text_characteristics_title">Características</string>
+    <string name="detail_title_availability">Disponibilidad</string>
+    <string name="text_availability_images">" disponibles"</string>
+    <string name="detail_title_effectiveDate">Válido hasta</string>
+    <string name="ads_title_date">Finaliza</string>
+    <string name="ads_title_date_operation">Fecha</string>
+    <string name="promtp_title_generate_receipt">Ficha de pago</string>
+    <string name="promtp_generate_receipt">Generar recibo de pago</string>
+    <string name="promtp_payment_processing">Procesando\nPor favor espera...</string>
+    <string name="text_prompt_date_operation">Fecha Operación:</string>
+    <string name="text_prompt_additional_info">Info. Adicional:</string>
+    <string name="text_prompt_days_created">Vendido:</string>
+    <string name="text_prompt_money_relase">Dinero disponible el:</string>
+    <string name="text_prompt_shipping_status">Prod. enviado/Servicio prestado:</string>
+    <string name="text_prompt_receive_status">Prod/Serv recibido:</string>
+    <string name="text_prompt_voucher_status">Comprobante:</string>
+    <string name="text_prompt_voucher_request">Agrega voucher</string>
+    <string name="text_prompt_list_cupons">Código(s)de Cupón(es):</string>
+    <string name="text_prompt_days_active">Finaliza:</string>
+    <string name="text_prompt_approval_title">Aprobación:</string>
+    <string name="text_prompt_approval_status">Estatus:</string>
+    <string name="detail_title_percentageOff">Descuento del</string>
+    <string name="text_location_title">¿Dónde es válido este descuento?</string>
+    <string name="text_product_type_title">Tipo y forma de venta del producto</string>
+    <string name="text_product_shipping_options">Habilita opciones para envíos o entregas</string>
+    <string name="text_product_type_virtual">Producto Virtual</string>
+    <string name="text_product_type_standard">Producto Standard</string>
+    <string name="text_product_type_standard_info">Vender Ropa,Zapatos,etc,. Los productos se pueden enviar por paquetería.</string>
+    <string name="text_product_type_virtual_info">Servicios, contrataciones,productos descargables,etc,. Productos intangibles, no pueden ser enviados.</string>
+    <string name="text_product_dimen_title">Dimensiones para enviar este producto</string>
+    <string name="text_product_weight">Peso(kg)</string>
+    <string name="text_product_heigth">Alto(cm)</string>
+    <string name="text_product_long">Largo(cm)</string>
+    <string name="text_product_wide">Ancho(cm)</string>
+    <string name="text_location_title_2">Ubicación...</string>
+    <string name="promt_other_locations_title">Válido en las siguientes Sucursales</string>
+    <string name="text_user_guess">Invitado</string>
+    <string name="promt_avatar">Agrega foto</string>
+    <string name="promt_publication_images_title">Fotos de tu servicio</string>
+    <string name="promt_voucher_images_title">Foto del comprobante</string>
+    <string name="text_email_guess">soporte@estrategiamovilmx.com</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_login">Registro</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_email_client">Email:</string>
+    <string name="prompt_show_password">Mostrar contraseña</string>
+    <string name="prompt_password_change_title">Cambiar contraseña</string>
+    <string name="prompt_email_sent">Email enviado...</string>
+    <string name="prompt_email_sent_error">Error enviando email, intente nuevamente.</string>
+    <string name="prompt_email_suscription_error">Error enviando formulario de suscripción, intente nuevamente.</string>
+    <string name="prompt_email_ask">Tu pregunta ha sido enviada...</string>
+    <string name="prompt_email_suscription_required">Tu formulario de renovacion ha sido enviado al correo registrado: </string>
+    <string name="prompt_suscription_upgrated_title">Felicitaciones !!</string>
+    <string name="prompt_suscription_upgrated">Ahora podras publicar y vender, comunicate al 5547642262 o a soporte@estrategiamovilmx.com para completar tus datos. </string>
+    <string name="prompt_benefits_title">Beneficios de Vender Cupones</string>
+    <string name="prompt_benefits_ads_title">Campaña en Medio sociales</string>
+    <string name="prompt_password">Password Máx. 20 caracteres</string>
+    <string name="prompt_password_new">Clave nueva</string>
+    <string name="prompt_password_new_confirm">Repetir clave nueva</string>
+    <string name="action_change_password">Modificar</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="action_sign_in_short">Crear una Cuenta</string>
+    <string name="action_upgrade">Actualizar a proveedor</string>
+    <string name="error_invalid_email">Correo inválido</string>
+    <string name="error_invalid_password">Proporcione contraseña válida</string>
+    <string name="error_invalid_password_not_equal">Constraseñas no coinciden</string>
+    <string name="error_incorrect_password">Password incorrecto</string>
+    <string name="error_field_required">Campo obligatorio</string>
+    <string name="error_data_not_valid">Proporcione la información requerida</string>
+    <string name="prompt_shipping_hint">Proporcionar datos...</string>
+    <string name="error_field_required_2">Obligatorio</string>
+    <string name="error_field_not_valid">Campo inválido</string>
+    <string name="error_image_required">Agregue al menos una imagen a su Publicación</string>
+    <string name="error_image__profile_required">Agregue una imagen</string>
+    <string name="error_conditions_required">Acepte las condiciones de Uso</string>
+    <string name="error_percentageOff_required">Seleccione descuento aplicable</string>
+    <string name="error_category_required">Seleccione una Categoría</string>
+    <string name="error_description_required">Describa su Producto/Servicio</string>
+    <string name="error_outstanding_required">Agregue información Destacada</string>
+    <string name="error_conditions_required_error">Agregue condiciones de su servicio</string>
+    <string name="error_price_publication">Se sugiere precio de publicación de %1$s para el producto</string>
+    <string name="money">"$ "</string>
+    <string name="money_2">$</string>
+    <string name="percentage">"%"</string>
+    <string name="promt_label_commision">Comisión</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="error_required_location_alias">Agregue nombre corto para esta ubicación</string>
+    <string name="error_required_location">Agregue una dirección</string>
+    <string name="error_required_location_confirm">Debe registrar al menos una dirección para registrar Sucursales...</string>
+    <string name="error_required_reference">Agregue referencia</string>
+    <string name="error_required_locations">Confirme la dirección ingresada.</string>
+    <string name="link_sign_in">¿Aún no tines cuenta? Créa una, es gratis.</string>
+    <string name="prompt_link_password"><u>Password</u></string>
+    <string name="error_prompt_login">Email o Password incorrectos</string>
+    <string name="prompt_link_subscriber">Soy Empresa/Negocio</string>
+    <string name="link_log_in">¿Ya tienes cuenta? Entrar ></string>
+    <string name="text_welcome">Bienvenido !</string>
+    <string name="text_signup_welcome">Publica y vende Productos o Servicios, responde preguntas a clientes o comienza campañas publicitarias.</string>
+    <string name="text_signup_subscriber_tip">Completa la información de forma precisa para que tus clientes te identifiquen mejor</string>
+    <string name="prompt_bussiness">Nombre Empresa/Negocio</string>
+    <string name="prompt_profile_info">Detalle</string>
+    <string name="prompt_user">Usuario</string>
+    <string name="prompt_your_name">Nombre</string>
+    <string name="prompt_profile_security">Seguridad</string>
+    <string name="prompt_name">Nombre:</string>
+    <string name="prompt_your_alias">Alias</string>
+    <string name="prompt_first_name">Paterno</string>
+    <string name="prompt_last_name">Materno</string>
+    <string name="prompt_photo">Foto o logo</string>
+    <string name="prompt_location">Seleccione Ubicación</string>
+    <string name="prompt_location_request">Agregar/Modificar Direcciones</string>
+    <string name="number_locations_added">Direcciones agregadas: </string>
+    <string name="number_locations_no_added">Agregue una direccion</string>
+    <string name="number_locations_title">Direcciones</string>
+    <string name="number_business_description_title">Que ofrece tu Empresa/Negocio ?</string>
+    <string name="number_locations_title_general">General</string>
+    <string name="prompt_address_title">Agrega una o más direcciones</string>
+    <string name="prompt_emergent_title">"Agregar tu oferta a campaña de temporada "</string>
+    <string name="prompt_emergent_tip">Anuncio expira automáticamente cuando la campaña termine</string>
+    <string name="prompt_noemergent_title">No hay campañas publicitarias de temporada</string>
+    <string name="prompt_password_confirm">Confima</string>
+    <string name="prompt_phone">Teléfono</string>
+    <string name="prompt_date_from">Desde</string>
+    <string name="prompt_capture_line">Línea de Captura</string>
+    <string name="prompt_date_to">Hasta</string>
+    <string name="prompt_available_photos">Hasta %1$d disponibles</string>
+    <string name="prompt_website">Sitio web o Video Youtube</string>
+    <string name="prompt_website_check">Cuento con página en internet</string>
+    <string name="prompt_website_http">http://</string>
+    <string name="prompt_validate_user">¿Disponible?</string>
+    <string name="prompt_confirm_clean">¿Estás seguro/a de que quieres empezar de nuevo?</string>
+    <string name="prompt_discart_promt">Descartar Cambios</string>
+    <string name="prompt_discart_promt_title">Se descartarán todos los cambios</string>
+    <string name="prompt_uploaderror_promt">Problema al cargar imágenes</string>
+    <string name="prompt_retry_promt">" imagen(es) no se cargaron correctamente"</string>
+    <string name="prompt_action_discart">DESCARTAR</string>
+    <string name="prompt_action_retry">REINTENTAR</string>
+    <string name="prompt_action_retry_search">INTENTAR DE NUEVO</string>
+    <string name="prompt_cancel">CANCELAR</string>
+    <string name="prompt_button_signup">Crear cuenta</string>
+    <string name="prompt_select_sector">Seleccione</string>
+    <string name="prompt_select_city">Seleccione Estado</string>
+    <string name="pick_image_intent_text">Foto de perfil</string>
+    <string name="pick_image">Elije Foto</string>
+    <string name="pick_image_voucher">Foto del comprobante de pago</string>
+    <string name="prompt_error_location">Elija ubicación desde el mapa</string>
+    <string name="prompt_loading_map">Cargando Mapa...</string>
+    <string name="prompt_loading_publish">Publicando...\nEstará listo en breve.</string>
+    <string name="prompt_error_pointselected">Elija ubicación exacta en el mapa...</string>
+    <string name="cancel">Cancelar</string>
+    <string name="close">Cerrar</string>
+    <string name="delete">Borrar</string>
+    <string name="label">label</string>
+    <string name="done">Aceptar</string>
+    <string name="promt_button_continue">Continuar</string>
+    <string name="send_notification">Enviar</string>
+    <string name="promt_button_show_tip_image">Entendido</string>
+
+    <string name="promt_button_call">LLAMAR</string>
+    <string name="promt_notification">Notificar</string>
+    <string name="promt_tip_title">Consejo</string>
+    <string name="promt_password_recovery_title">Recupera tu contraseña</string>
+    <string name="promt_filters_title">Filtrar resultados</string>
+    <string name="promt_password_recovery_text">Proporciona tu email registrado para poder enviarte instrucciones para recuperar tu acceso</string>
+    <string name="promt_password_recovery_message">Instruccines para recuperar tu acceso han sido enviadas a tu correo.</string>
+    <string name="promt_suscription_dialog_title">¿Te gustaría vender?</string>
+    <string name="promt_error_phone">Número telefónico no disponible</string>
+    <string name="promt_error_no_available">No disponible</string>
+    <string name="promt_phone">Teléfono</string>
+    <string name="promt_call_title">Contactar al Vendedor</string>
+    <string name="promt_predeterminated_message">Notificacion Predeterminada</string>
+    <string name="promt_message_noticated">NOTIFICADO</string>
+    <string name="promt_setting_notifications_title">Notificaciones</string>
+    <string name="promt_setting_preferences_title">Preferencias</string>
+    <string name="promt_setting_notifications_desc1">Recibir Notificaciones</string>
+    <string name="promt_setting_notifications_desc2">Recibir notificaciones de ofertas</string>
+    <string name="promt_setting_categories_desc1">Categorias</string>
+    <string name="promt_setting_categories_desc2">Selecciona que categorias de productos te interesan más</string>
+    <string name="promt_noticated_error">ERROR</string>
+    <string name="promt_show_tip_images">Las fotos de la cámara deben tomarse en horizontal para mejor visualización de su publicación</string>
+    <string name="promt_show_tip_firsttime">Busca y encuentra cupones de descuento en servicios o registrate como empresa para promocionar tus productos y servicios.</string>
+    <string name="promt_show_tip_subscriber_firsttime">Entra a tu correo registrado y activa tu cuenta, inicia sesión nuevamente para que se habiliten todas las opciones que tienes para conseguir clientes.</string>
+    <string name="promt_show_tip_subscriber_firsttime_title">Activa tu cuenta !</string>
+    <string name="promt_suscription_message">Aumenta tus clientes vendiendo cupones de descuento. Conoce los beneficios que puedes obtener bajo este esquema.</string>
+    <string name="promt_suscription_tip_1">Aumenta tus clientes, Renueva o Contrata publicidad en Medios Sociales Facebook, Twitter, Instagram y más para promover tus productos o servicios</string>
+    <string name="promt_user_tip_1">.</string>
+    <string name="promt_suscription_tip_2">Registrate y encuentra ofertas en servicios, o publica y vende tus Servicios obteniedo mas clientes mediante el Marketing Móvil.</string>
+    <string name="promt_show_tip_title">Aviso</string>
+    <string name="promt_message">Proporcione mensaje a enviar...</string>
+    <string name="promt_comment">Opine acerca de este Proveedor...</string>
+    <string name="promt_business_description">Esta información es la que veran tus clientes sobre tu negocio...</string>
+    <string name="promt_notified_error">Lo sentimos, el servicio no esta disponible por el momento.</string>
+    <string name="prompt_street">Calle</string>
+    <string name="prompt_city">Estado</string>
+    <string name="prompt_reference">Referencia del lugar</string>
+    <string name="prompt_number_ext">Num Ext</string>
+    <string name="prompt_number_int">Num Int</string>
+    <string name="prompt_cp">Código Postal</string>
+    <string name="prompt_location_alias">Alias Sucursal/Local/Oficina</string>
+    <string name="prompt_country">País</string>
+    <string name="prompt_new_text">Nuevo texto de portada</string>
+    <string name="text_promt_advantage">Beneficios</string>
+    <string name="text_promt_advantage_ads">¿Que incluye tu campaña?</string>
+    <string name="text_promt_advantage_guess">Registra tu Empresa/Negocio y obtén los siguientes beneficios</string>
+    <!-- Publicidad-->
+    <string name="text_promt_advantage_1">Publica y promueve tus servicios</string>
+    <string name="text_promt_advantage_2">Todos los usuarios serán notificados sobre servicios nuevos</string>
+    <string name="text_promt_advantage_3">Promociona tus servicios en todo el País</string>
+    <string name="text_promt_advantage_4">Atiende tus clientes por teléfono y correo inmediatamente</string>
+    <string name="text_promt_advantage_5">Tus clientes podrán encontrarte y conducir hacia ti mediante Google Maps</string>
+    <string name="text_promt_advantage_6">Administra, Contacta y Fideliza tus clientes</string>
+    <!-- incluye el 11-->
+    <!-- Cupones -->
+    <string name="text_promt_advantage_7">Vende Cupones de descuento y aumenta tus Ventas</string>
+    <string name="text_promt_advantage_8">Publica y promueve tus servicios</string>
+    <string name="text_promt_advantage_9">Promociona tus servicios mediante campañas de temporadas altas. Ej. El Buen Fín,Día de la madre,etc,.</string>
+    <string name="text_promt_advantage_10">Atiende tus clientes por teléfono y correo inmediatamente</string>
+    <!-- incluye el 5 y 6-->
+    <string name="text_promt_advantage_11">Notifica a tus clientes mediante notificaciones push.</string>
+    <string name="text_promt_advantage_12">Consulta tus ventas realizadas</string>
+
+    <string name="text_promt_advantage_1_ads">Campaña SMART: Especifica, Medible, Realizable,Relevante y Limitado a un tiempo.</string>
+    <string name="text_promt_advantage_2_ads">Estratégica: Conocer y alcanzar al tu tipo de cliente y ejecutar acciones necesarias.</string>
+    <string name="text_promt_advantage_3_ads">Elección de Indicadores de rendimiento: Optimización de la campaña.</string>
+    <string name="text_promt_advantage_4_ads">Medición, Análisis, Optimización.</string>
+    <string name="text_promt_advantage_5_ads">Calculo de retorno de la inversión:Conversiones, Trafico Web,Aumento de la comunidad en Redes Sociales, Interacciones, Alcance.</string>
+
+    <string name="text_promt_announcement_1">Activa o desactiva tu suscripción al pagar o dejar de pagar sin ningún problema</string>
+    <string name="text_promt_announcement_2" formatted="false">WeeSpare toma una mínima comisión del total de cada cupón, sólo si éste es vendido. </string>
+    <!-- Tip upgrade-->
+    <string name="text_promt_tip1_upgrade">Para publicar cupones de descuento y aumentar tus clientes, ve al menú Suscripciones,selecciona la opción Cupones y confirma.</string>
+    <string name="text_promt_tip2_upgrade">Cierra y abre sesión,ahora ya podrás publicar, vender y gestionar tus clientes.</string>
+    <string name="text_promt_tip3_upgrade">Comunicate a soporte para finalizar tu registro o escribe al correo soporte@estrategiamovilmx.com</string>
+
+    <string name="text_promt_ad">Publicidad</string>
+    <string name="text_promt_mes">/mes</string>
+    <string name="text_promt_sale">/venta Concretada</string>
+    <string name="text_promt_cupons">Cupones</string>
+    <string name="text_promt_term">Elije un plazo</string>
+    <string name="promt_select_suscriptino_error">Selecciona un plazo de suscripción</string>
+    <string name="text_promt_pay_suscription">Pagar publicidad</string>
+    <string name="text_promt_pay_suscription_upgrade">Quiero vender</string>
+    <string name="text_upgrade_to_subscriber">Convertirme en proveedor</string>
+    <string name="text_promt_suscription_upgrade_tip">Ademas de publicarme quiero vender</string>
+    <string name="promt_button_init_login">Registrarme Ahora</string>
+    <string name="text_promt_days">Días restantes</string>
+    <string name="text_promt_buton_mp_cash">Depósito/Oxxo</string>
+    <string name="text_promt_buton_mp">Débito/Crédito/Depósito con</string>
+    <string name="text_promt_buton_mp_tdc">Tarjeta Crédito/Débito</string>
+    <string name="text_promt_button_oxxo">Depósito directo</string>
+    <string name="text_promt_num_items"># Artículos:</string>
+    <string name="text_promt_method_payment">Elije método de pago:</string>
+    <string name="text_promt_method_payment_required">Elije método de pago</string>
+    <string name="text_promt_method_title">Medio de pago</string>
+    <string name="text_promt_info_purchase_1_1">En breve recibirás los cupones en tu email registrado. Presentalos en la ubicación indicada</string>
+    <string name="text_promt_info_purchase_1_2">Implime el cupón y paga. Se acreditará en 1 a 3 días hábiles</string>
+    <string name="text_promt_info_purchase_3">La información para realizar el pago y finalizar la compra ha sido enviada a tu email</string>
+    <string name="text_promt_operation_title">Operación</string>
+    <string name="text_promt_purchase_data_title">Detalles de la compra</string>
+    <string name="text_promt_send_rate_title">Califica este Proveedor</string>
+    <string name="text_promt_product_sent_title">Estatus de envío del producto</string>
+    <string name="text_promt_rated_title">Ya calificada</string>
+    <string name="text_promt_voucher_title">Ya existe comprobante</string>
+    <string name="text_promt_no_voucher_title">Voucher de pago pendiente</string>
+    <string name="text_publication_paused">Suspendida</string>
+    <string name="text_promt_send_rate_stars_title">Calificación</string>
+    <string name="text_promt_product_sent">Confirmar que ya se envió el producto o que el Comprador ha hecho efectivo el descuento</string>
+    <string name="text_promt_send_rate_comment_title">Comentario</string>
+    <string name="text_promt_tracking_title">Proporcione número de guía y compañia (Estafeta, DHL, Correos, WeeSpareEnvios, otra)</string>
+    <string name="text_promt_shipping_on_store_condition">Cliente recogió en Tienda/Entrega personal</string>
+    <string name="text_promt_product_ok_question">¿Confirma que ha recibído el producto o que ha hecho efectivo el descuento?</string>
+    <string name="text_promt_product_ok">El producto llegó en mal estado/No fue lo que pedí</string>
+    <string name="text_promt_product_receive_ok">Ya tengo el producto/hice efectivo el descuento</string>
+    <string name="text_promt_send_rate_error">Algo salió mal, intenta nuevamente...</string>
+    <string name="text_promt_purchase_info">Instrucciones</string>
+    <string name="text_purchase_info">A continuación, recibiras un correo con el que podrás realizar tu pago en OXXO.</string>
+    <string name="text_purchase_info_2">Inmediatamente después de realizar tu pago recibirás en tu correo los cupones con los que podrás canjear tus productos.</string>
+    <string name="action_confirm">Confirmar compra</string>
+    <string name="action_go_purchases">Ver mis compras</string>
+    <string name="text_promt_congrats_1">Gracias por adquirir</string>
+    <string name="text_promt_congrats_2">tu Cupón</string>
+    <!-- new Publication-->
+    <string name="text_add_photos">Agrega hasta 5 fotos</string>
+    <string name="text_add_photos_edit">Agrega foto</string>
+    <string name="text_promt_new_product">Detalles del Producto o Servicio</string>
+    <string name="text_promt_category">Categoría</string>
+    <string name="text_promt_type_publication_title">Vender un producto</string>
+    <string name="text_promt_copy">Envíame una copia</string>
+    <string name="text_promt_publication">Publicación:</string>
+    <string name="text_promt_business">Anunciante:</string>
+    <string name="text_promt_finished">FINALIZADA</string>
+    <string name="text_promt_out_of_stock">AGOTADA</string>
+    <string name="text_promt_in">"En "</string>
+    <string name="text_promt_days_from">"Hace "</string>
+    <string name="text_promt_days_active">" Días"</string>
+    <string name="text_promt_1_day_active">" Día"</string>
+    <string name="text_promt_today">Hoy</string>
+    <string name="text_promt_expired">Caducada</string>
+    <string name="text_promt_type_publication">"Publicar como "</string>
+    <string name="text_promt_type_ads">Anuncio</string>
+    <string name="text_promt_type_sale">Producto con descuento</string>
+    <string name="text_promt_select_category">Seleccione Categoría</string>
+    <string name="text_promt_cover">Título de la publicación</string>
+    <string name="text_promt_cover_extended">Descripción que aparecerá en el detalle (corta)</string>
+    <string name="text_promt_cover_extended_tip">Menciona algo que impacte a tus clientes</string>
+    <string name="text_promt_product_title">Precios y existencias</string>
+    <string name="text_promt_percentageOff">% Descuento</string>
+    <string name="text_promt_availibility">Existencias</string>
+    <string name="text_promt_regular_price">$ Precio Regular</string>
+    <string name="text_promt_price_from">De:</string>
+    <string name="text_promt_price_to">A:</string>
+    <string name="text_promt_price">Precio:</string>
+    <string name="text_promt_price_title">Precio de la oferta</string>
+    <string name="text_promt_iva">IVA:</string>
+    <string name="welcome_title">Mira las opciones que tienes para realizar tu compra</string>
+    <string name="text_promt_total">Total:</string>
+    <string name="text_promt_total_sale">Monto total:</string>
+    <string name="text_promt_total_commission">Comisión WeeSpare:</string>
+    <string name="text_promt_capture_line">Línea Captura:</string>
+    <string name="text_promt_net">Neto a cobrar:</string>
+    <string name="text_promt_payment_method">Medio de Pago:</string>
+    <string name="text_promt_payer">Comprador:</string>
+    <string name="text_promt_total_title">Total</string>
+    <string name="text_promt_offer_price">$ Precio de Venta</string>
+    <string name="text_promt_effective_date">"Vigencia "</string>
+    <string name="text_promt_stock">Existencias</string>
+    <string name="text_promt_effective_date_ads">(Seleccione fecha no mayor a una semana)</string>
+    <string name="text_promt_detailed_description_title">Describe tu Producto/Servicio</string>
+    <string name="text_promt_description">...</string>
+    <string name="text_promt_outstanding_title">Destacado</string>
+    <string name="text_promt_characterictics_title">Condiciones de prestación del Servicio</string>
+    <string name="text_button_publish">Publica Ahora</string>
+    <string name="text_button_reset">Limpiar</string>
+    <string name="text_button_filter">Filtrar</string>
+    <string name="text_button_conditions">"Acepto las "</string>
+    <string name="text_button_conditions_2"><u>Condiciones de uso</u></string>
+    <string name="text_button_continue"><u>Seguir comprando</u></string>
+    <string name="text_prompt_image_exists">Imagen ya agregada elije una diferente</string>
+    <string name="text_prompt_image_updated">Imagen de perfíl actualizada</string>
+    <string name="text_prompt_profile_updated">Actualización exitosa</string>
+    <string name="text_prompt_image_error">Imagen no actualizada, por favor intenta nuevamente</string>
+    <string name="text_prompt_detailed_desc">Texto de la portada de su publicación</string>
+    <string name="text_prompt_outstanding">Describa las características más destacadas que llamen la atención de sus clientes</string>
+    <string name="text_prompt_send_response">Escribe tu respuesta</string>
+    <string name="text_prompt_characteristics">Informe a su cliente las condiciones para brindarle el servicio, por ejemplo:No acumulabre, Sólo válido de lunes a viernes, etc.</string>
+
+    <!-- Help-->
+    <string name="prompt_help_title">¿En qué podemos ayudarte?</string>
+
+
+
+    <string name="text_conditions"><![CDATA[
+    <h4><font color="#0288D1">Condiciones Generales de Uso</font></h4>
+<h5>Términos legales</h5>
+<h6><strong>1. GENERALIDADES</strong></h6>
+<p style="color: #000000; font-size: 11px;">El presente documento tiene por objeto establecer las Condiciones Generales de Uso (en adelante "TCU") de la aplicación Móvil WeeSpare y el sitio estrategiamovilmx.com/weespare/ (en adelante, "El Sitio") en internet y todas las páginas en línea con titularidad de Germán Rosete Peña (en adelante WeeSpare), con domicilio fiscal en Morelos 24, Ocotlán Tlaxcala, Mexico., con Registro Federal de Causantes ROPG831022VC2.</p>
+<p style="color: #000000; font-size: 11px;">WeeSpare se reserva el derecho a modificar las presentes Condiciones Generales de Uso con el objeto de adecuarlas a la legislación vigente aplicable en cada momento, las novedades jurisprudenciales y las prácticas habituales de mercado. Las presentes Condiciones Generales de Uso no excluyen la posibilidad de que determinados servicios de WeeSpare y "El Sitio", por sus características particulares, sean sometidos, además de a las Condiciones Generales de Uso, a sus propias condiciones particulares de uso (en adelante las Condiciones Particulares).</p>
+<p style="color: #000000; font-size: 11px;">La utilización por parte del usuario de cualquiera de los servicios publicados en WeeSpare y/o "El Sitio"  supone y expresa su adhesión y aceptación expresa a todas las Condiciones Generales de Uso en la versión publicada en la presente página web, en el momento en que el usuario acceda a WeeSpare, así como a las Condiciones Particulares que, en su caso, sean de aplicación.</p>
+<p style="color: #000000; font-size: 11px;">Las TCU contenidas en el presente instrumento, se aplicarán a todas las compras y a todos los servicios que se contraten en WeeSpare y "El Sitio", especialmente a los siguientes actos y acciones: (i) La compra y venta de los Productos y Servicios ofrecidos y prestados por las personas Físicas o Morales constratantes (en adelante "Los Proveedores") con WeeSpare, a travéz de "El Sitio".</p>
+
+<h5><strong>2. CONDICIONES DE ACCESO Y USO DE WeeSpare</strong></h5>
+<h6>2.1. Condición de Usuario</h6>
+<p style="color: #000000; font-size: 11px;">El acceso y uso de la Aplicación Móvil WeeSpare y  "El Sitio" de cualquier forma y para cualquier efecto previamente autorizado por WeeSpare, salvo acuerdo expreso en contrario que conste por escrito atribuye la Condición de Usuario del mismo.</p>
+
+<h6>2.2. Necesidad de Registro</h6>
+<p style="color: #000000; font-size: 11px;">Con carácter general para el acceso a los servicios publicados en la Aplicación WeeSpare no será necesario el registro del usuario. No obstante la utilización de determinados servicios podrá estar condicionada al Registro Previo del Usuario. Este registro se efectuará en la forma expresamente señalada en el propio servicio o en las Condiciones Particulares que le sean de aplicación.</p>
+<p style="color: #000000; font-size: 11px;">Las personas Físicas o Morales debidamente representadas, (en adelante el Usuario o el Comprador) que deseen comprar los descuentos y acceder y/o usar la aplicación Móvil WeeSpare, podrán hacerlo siempre y cuando se registren y acepten los TCU contenidas en este documento, así como también las demás políticas que rigen El Sitio y que son integradas en el presente documento.</p>
+
+<h6>2.3. Uso de WeeSpare y sus Servicios</h6>
+<p style="color: #000000; font-size: 11px;">El usuario reconoce y acepta que el uso de los contenidos y/o servicios ofrecidos por "Los proveedores" a travéz de WeeSpare será bajo su exclusivo riesgo y/o responsabilidad.</p>
+<p style="color: #000000; font-size: 11px;">El usuario se compromete a utilizar WeeSpare y todos sus contenidos y servicios conforme a lo establecido en la ley, la moral, el orden público y en las presentes TCU, y en las Condiciones Particulares que, en su caso, le sean de aplicación. Asimismo, se compromete hacer un uso adecuado de los servicios y/o contenidos de WeeSpare y a no emplearlos para realizar actividades ilícitas o constitutivas de delito, que atenten contra los derechos de terceros y/o que infrinjan la regulación sobre propiedad intelectual e industrial, o cualesquiera otras normas del ordenamiento jurídico aplicable.</p>
+<p style="color: #000000; font-size: 11px;">El usuario se compromete a no trasmitir, introducir, difundir ni poner a disposición de terceros cualquier tipo de material e información (datos contenidos, mensajes, dibujos, archivos de sonido e imagen, fotografías, software...) que sean contrarios a la ley, la moral, el orden público y las presentes TCU y, en su caso, a las Condiciones Particulares que le sean de aplicación. A título enunciativo, y en ningún caso limitativo o excluyente, el usuario se compromete a:</p>
+
+<ol style="color: #000000; font-size: 11px;">
+ 	<li>No introducir o difundir contenidos o propaganda de carácter racista, xenófobo, pornográfico, de apología del terrorismo o que atenten contra los derechos humanos.</li>
+ 	<li>No introducir o difundir en la red programas de datos (virus y software nocivo) susceptibles de provocar daños en los sistemas informáticos del proveedor de acceso, sus proveedores o terceros usuarios de la red Internet.</li>
+ 	<li>No difundir, transmitir o poner a disposición de terceros cualquier tipo de información, elemento o contenido que atente contra los derechos fundamentales y las libertades públicas reconocidos constitucionalmente y en los tratados internacionales.</li>
+ 	<li>No difundir, transmitir o poner a disposición de terceros cualquier tipo de información, elemento o contenido que constituya publicidad ilícita o desleal.</li>
+ 	<li>No transmitir publicidad no solicitada o autorizada, material publicitario, "correo basura", "cartas en cadena", "estructuras piramidales", "estructuras en red" o cualquier otra forma de solicitación, excepto en aquellas áreas (tales como espacios comerciales) que hayan sido exclusivamente concebidas para ello.</li>
+ 	<li>No introducir o difundir cualquier información y contenidos falsos, ambiguos o inexactos de forma que induzca a error a los receptores de la información.</li>
+ 	<li>No suplantar a otros usuarios utilizando sus claves de registro a los distintos servicios y/o contenidos de los WeeSpare.</li>
+ 	<li>No difundir, transmitir o poner a disposición de terceros cualquier tipo de información, elemento o contenido que suponga una violación de los derechos de propiedad intelectual e industrial, patentes, marcas o copyright que correspondan a los titulares de los portales o a terceros.</li>
+ 	<li>No difundir, transmitir o poner a disposición de terceros cualquier tipo de información, elemento o contenido que suponga una violación del secreto de las comunicaciones y la legislación de datos de carácter personal.</li>
+</ol>
+
+<h6>2.4. Nomenclatura</h6>
+<p style="color: #000000; font-size: 11px;">Uno de los servicios ofrecidos en la Aplicación WeeSpare, es la oferta de venta al público en general de Productos y/o Servicios vendidos o prestados por personas Físicas o Morales no relacionadas a WeeSpare. Este servicio se denominará, en adelante, la "Oferta".</p>
+<h6>2.4.1 La Oferta</h6>
+<p style="color: #000000; font-size: 11px;">WeeSpare, a través de la Aplicacioón Móvil WeeSpare y el Sitio, ofrecerá a la venta Productos y/o Servicios vendidos o prestados por su intermedio por los Proveedores, según las condiciones y procedimiento que se expresa a continuacion:</p>
+<ol style="color: #000000; font-size: 11px;">
+ 	<li>Durante el o los días que el aviso se encuentre publicado en la Aplicación WeeSpare y el Sitio, los Compradores y/o Usuarios podrán efectuar ordenes de compra online, garantizando el pago a través de una tarjeta de crédito bancaria, tarjeta de débito, depósito en efectivo en tiendas OXXO o transferencia bancaria cualquier otra forma que, a juicio de WeeSpare, ofrezca garantía suficiente de pago.</li>
+ 	<li>Las Ofertas incluirán los parámetros, detalles y condiciones específicas de los Productos y/o Servicios objetos del descuento.</li>
+ 	<li>Cada oferta incluirá las especificaciones, detalles y condiciones de los Servicios y/o Productos objeto del Descuento, como también la forma del Descuento y de los Productos y Servicios objeto del mismo.</li>
+ 	<li>Las ofertas donde se promocione un Producto o Servicio tendrán una duracion determinada máxima de 7 días naturales, por el contrario, las publilcaciones donde se ofrezca la venta de Descuento en Productos y/o Servicios tendrán una duración determinada por los Proveedores, dichas vigencias de a duración se publicarán a los Compradores y/o Usuarios a través de WeeSpare. </li>
+ 	<li>Cada cupón de descuento tendrá su código de verificación, el cual no es nominativo, por lo que podrá ser usado por el portador del mimso. WeeSpare no se hace responsable por la pérdida, mal uso o uso no autorizado del cupón, ya sea por parte del Usuario y/o Comprador, o de terceros, luego de realizada la compra.</li>
+ 	<li>Las ofertas serán válidas exclusivamente para dentro del territorio de Los Estados Unidos Mexicanos.</li>
+ 	<li>Las descripciones de todas las publicaciones dentro de WeeSpare objeto de los descuentos y/o Promoción serán proporcionadas por los Proveedores de WeeSpare, las fotografias, imagenes, videos de los servicios, los Productos, entre otros, son meramente ilustrativos.</li>
+ 	<li>Las Ofertas ofrecidas en El Sitio tienen un plazo y vigencia determinado. Dicho plazo se hará constar en cada una de las Ofertas y en el o los Cupones respectivos. De tal formal, el Usuario y/o Comprador reconoce que es conocedor de dicho plazo y que transcurrido el plazo de validez, el cupón quedará sin efecto y validez, sin derecho del comprador y/o Usuario de efectuar reclamo o de solicitar devolución alguna.</li>
+ 	<li>Por el momento,WeeSpare no proporciona ni administra envios de Productos a domicilio por lo que en su caso tendrán que ser acordados por Comprador y Proveedor los detalles referentes al envio, transportación, entrega y costos de envío. Por lo cual, es responsabilidad del Usuario y/o Comprador despejar todo tipo de dudas sobre el Producto así como aceptar un producto única y exlusivamente después de haber realizado una revisión del dicho Producto y que éste se encuente en optimas condiciones.</li>
+</ol>
+
+
+<h5><strong>3. PROPIEDAD INTELECTUAL</strong></h5>
+<p style="color: #000000; font-size: 11px;">Los contenidos, elementos e información a los que el usuario pueda acceder a través de WeeSpare están sujetos a derechos de propiedad industrial e intelectual, patentes marcas, copyright del titular de WeeSpare o de terceros titulares de los mismos. En consecuencia, el acceso a estos contenidos o elementos no otorga al usuario el derecho de alteración, modificación, explotación, reproducción, distribución o comunicación pública o cualquier otro derecho que corresponda al titular del derecho afectado.</p>
+<p style="color: #000000; font-size: 11px;">El usuario se compromete a utilizar los contenidos y/o elementos a los que acceda a través de los servicios de WeeSpare para su propio uso y necesidades, y a no realizar en ningún caso una explotación comercial, directa o indirecta de los mismos.</p>
+<p style="color: #000000; font-size: 11px;">El usuario autoriza a reproducir, distribuir y comunicar públicamente las fotografías que inserte en su publicación o anuncio para ser publicadas en la Aplicación WeeSpare, así como a añadir las marcas de agua de WeeSpare con el fin de evitar un aprovechamiento no consentido por parte de terceros.</p>
+<p style="color: #000000; font-size: 11px;">El nombre y la marca son propiedad de Germán Rosete Peña.</p>
+<p style="color: #000000; font-size: 11px;">Asímismo queda totalmente prohibida la copia, reproduccion, adaptación, modificación, distribución, comercialización, comunicación pública y/o cualquier otra acción que comporte una infracción de la normativa vigente en México y/o internacionalmente en materia de propiedad intelectual y/o industrial, así como el suo de los contenidos de El Sitio si no es con previa autorización expresa y po escrito de WeeSpare.</p>
+<p style="color: #000000; font-size: 11px;">WeeSpare se compromete a respetar los derechos de propiedad intelectual de terceros. Por tanto, si cualquier persona considera que su trabajo ha sido copiado en forma tal que constituya una violación a sus derechos de propiedad intelectual, comuníquese con nuestra empresa a contacto@estrategiamovilmx.com</p>
+
+<h5><strong>4. EXCLUSIÓN DE GARANTÍAS. RESPONSABILIDAD</strong></h5>
+<h6>4.1. Disponibilidad y Continuidad de estrategiamovilmx.com y de sus Servicios</h6>
+<p style="color: #000000; font-size: 11px;">WeeSpare no garantiza la disponibilidad, acceso y continuidad del funcionamiento de la Aplicación Móvil y El Sitio y de sus servicios. WeeSpare no será responsable, con los límites establecidos en el ordenamiento jurídico vigente, de los daños y perjuicios causados al usuario como consecuencia de la indisponibilidad, fallos de acceso y falta de continuidad de la Aplicación WeeSpare y sus servicios.</p>
+
+<h6>4.2. Contenidos y Servicios de WeeSpare</h6>
+<p style="color: #000000; font-size: 11px;">WeeSpare responderá única y exclusivamente de los servicios que preste por sí misma y de los contenidos directamente originados por WeeSpare e identificados con su copyright. Dicha responsabilidad quedará excluida en los casos en que concurran causas de fuerza mayor o en los supuestos en que la configuración de los equipos del usuario no sea la adecuada para permitir el correcto uso de los servicios de internet prestados por WeeSpare. En cualquier caso, la eventual responsabilidad de WeeSpare frente al usuario por todos los conceptos quedará limitada como máximo al importe de las cantidades percibidas directamente del usuario por WeeSpare, con exclusión en todo caso de responsabilidad por daños indirectos o por lucro cesante.</p>
+<p style="color: #000000; font-size: 11px;">El portal no se hace responsable del mantenimiento por parte de terceros (como los que se indican aquí a título enunciativo, y en ningún caso limitativo o excluyente: sitios webs, agregadores, plataformas de pagos, redes sociales o blogs) una vez el anuncio se de baja de nuestras bases de datos.</p>
+
+<h6>4.3. Contenidos y Servicios de Terceros</h6>
+<p style="color: #000000; font-size: 11px;">WeeSpare no controla previamente, aprueba ni hace propios los contenidos, servicios, opiniones, comunicaciones datos, archivos, productos y cualquier clase de información de terceros, personas jurídicas o físicas, recogidos en el portal. De igual forma, no garantiza la licitud, fiabilidad, utilidad, veracidad, exactitud, exhaustividad y actualidad de los contenidos, informaciones y servicios de terceros en el portal.</p>
+<p style="color: #000000; font-size: 11px;">WeeSpare no controla con carácter previo y no garantiza la ausencia de virus y otros elementos en los contenidos y servicios prestados por terceros a través de la Aplicación Móvil y/o El Sitio que puedan introducir alteraciones en el sistema informático, documentos electrónicos o archivos de los usuarios.</p>
+<p style="color: #000000; font-size: 11px;">WeeSpare no será responsable, ni indirectamente ni subsidiariamente, de los daños y perjuicios de cualquier naturaleza derivados de la utilización y contratación de los contenidos y de los servicios de terceros en el portal así como de la falta de licitud, fiabilidad, utilidad, veracidad, exactitud, exhaustividad y actualidad de los mismos. Con carácter enunciativo, y en ningún caso limitativo, no será responsable por los daños y perjuicios de cualquier naturaleza derivados de a) la infracción de los derechos propiedad intelectual e industrial y el cumplimiento defectuoso o incumplimiento de los compromisos contractuales adquiridos por terceros; b) la realización de actos de competencia desleal y publicidad ilícita; c) la inadecuación y defraudación de las expectativas de los servicios y contenidos de los terceros; d) los vicios y defectos de toda clase de los servicios y contenidos de terceros prestados a través de la Aplicación Móvil y el Sitio.</p>
+<p style="color: #000000; font-size: 11px;">WeeSpare no será responsable, ni indirectamente ni subsidiariamente, de los daños y perjuicios de cualquier naturaleza causados al usuario como consecuencia de la presencia de virus u otros elementos en los contenidos y servicios prestados por terceros que puedan producir alteraciones en el sistema informático, documentos electrónicos o archivos de los usuarios.</p>
+<p style="color: #000000; font-size: 11px;">La exoneración de responsabilidad señalada en los párrafos anteriores será de aplicación en el caso de que WeeSpare no tenga conocimiento efectivo de que la actividad o la información almacenada es lícita o de que lesiona bienes o derechos de un tercero susceptibles de indemnización, o si la tuviesen actúen con diligencia para retirar los datos y contenidos o hacer imposible el acceso a ellos.</p>
+
+<h6>4.3.1 El Servicio</h6>
+<p style="color: #000000; font-size: 11px;">WeeSpare solo vende los descuentos que el Usuario puede canjear por Productos y/o Servicios vendidos por los Proveedores.</p>
+
+<h6>4.4. Conducta de los Usuarios y/o Compradores</h6>
+<p style="color: #000000; font-size: 11px;">WeeSpare no garantiza que los usuarios de estrategiamovilmx.com utilicen los contenidos y/o servicios del portal de conformidad con la ley, la moral, el orden público, ni las presentes Condiciones Generales y, en su caso, las Condiciones Particulares que resulten de aplicación. Asimismo, no garantiza la veracidad y exactitud, exhaustividad y/o autenticidad de los datos proporcionados por los usuarios.</p>
+<p style="color: #000000; font-size: 11px;">WeeSpare no será responsable, indirecta ni subsidiariamente, de los daños y perjuicios de cualquier naturaleza derivados de la utilización de los servicios y contenidos de los portales por parte de los usuarios o que puedan derivarse de la falta de veracidad, exactitud y/o autenticidad de los datos o informaciones proporcionadas por los usuarios, o de la suplantación de la identidad de un tercero efectuada por un usuario en cualquier clase de actuación a través de estrategiamovilmx.com. A título enunciativo, pero no limitativo, WeeSpare no será responsable indirecta o subsidiariamente de:</p>
+
+<ol style="color: #000000; font-size: 11px;">
+ 	<li>Los contenidos, informaciones, opiniones y manifestaciones de cualquier usuario o de terceras personas o entidades que se comuniquen o exhiban a través de la Aplicación Movil y/o El Sitio.</li>
+ 	<li>Los daños y perjuicios causados a terceros derivados de la utilización por parte del usuario de los servicios y contenidos de la Aplicación Móvil y/o el Sitio.</li>
+ 	<li>Los daños y perjuicios causados por la falta de veracidad, exactitud o incorrección de la identidad de los usuarios y de toda información que estos proporcionen o hagan accesible a otros usuarios;</li>
+ 	<li>De los daños y perjuicios derivados de infracciones de cualquier usuario que afecten a los derechos de otro usuario, o de terceros, incluyendo los derechos de copyright, marca, patentes, información confidencial y cualquier otro derecho de propiedad intelectual e industrial.</li>
+</ol>
+<h6>4.5. CONTRATACIÓN CON TERCEROS A TRAVÉS DE estrategiamovilmx.com</h6>
+<p style="color: #000000; font-size: 11px;">El Usuario reconoce y acepta que cualquier relación contractual o extracontractual que, en su caso, formalice con los anunciantes o terceras personas contactadas a través de estrategiamovilmx.com, así como su participación en concursos, promociones, compraventa de bienes o servicios, se entienden realizados única y exclusivamente entre el usuario y el anunciante y/o tercera persona. En consecuencia, el usuario acepta que WeeSpare no tiene ningún tipo de responsabilidad sobre los daños o perjuicios de cualquier naturaleza ocasionados con motivo de sus negociaciones, conversaciones y/o relaciones contractuales o extracontractuales con los anunciantes o terceras personas físicas o jurídicas contactadas a través de la Aplicación Móvil y/o El Sitio.</p>
+
+
+<h5><strong>5. VARIOS</strong></h5>
+<h6>5.1. Modificaciones</h6>
+<p style="color: #000000; font-size: 11px;">WeeSpare se reserva el derecho a efectuar las modificaciones que estime oportunas, pudiendo modificar, suprimir e incluir, unilateralmente y sin previo aviso, nuevos contenidos y/o servicios, así como la forma en que estos aparezcan presentados y localizados.</p>
+<p style="color: #000000; font-size: 11px;">Todas las imágenes subidas al portal se protegerán con marcas de agua, previniendo que puedan ser usadas para otros propósitos sin el previo consentimiento de los anunciantes.</p>
+
+<h6>5.2. Derecho de exclusión</h6>
+<p style="color: #000000; font-size: 11px;">WeeSpare se reserva el derecho a denegar o retirar el acceso al portal y/o los servicios ofrecidos, sin necesidad de preanuncio a instancia propia o de un tercero, a aquellos usuarios que incumplan las presentes Condiciones Generales de Uso y/o las Condiciones Particulares que, en su caso, resulten de aplicación.</p>
+
+<h6>5.3. Menores de Edad</h6>
+<p style="color: #000000; font-size: 11px;">Con carácter general, para hacer uso de los servicios de WeeSpare los menores de edad deben haber obtenido previamente la autorización de sus padres, tutores o representantes legales, quienes serán responsables de todos los actos realizados a través de WeeSpare por los menores a su cargo. En aquellos servicios en los que expresamente se señale, el acceso quedará restringido única y exclusivamente a mayores de 18 años.</p>
+
+<h5><strong>6. DURACIÓN Y TERMINACIÓN</strong></h5>
+<p style="color: #000000; font-size: 11px;">La prestación de los servicios y/o contenidos de WeeSpare tiene una duración ya determinada por el tipo de publicación, promocional de 7 dias y venta de cupones de descuento determinada por el Proveedor. No obstante, Sin perjuicio de lo anterior, WeeSpare está facultada para dar por terminada, suspender o interrumpir unilateralmente, en cualquier momento y sin necesidad de preanuncio, la prestación del servicio y de WeeSpare y/o el Sitio y/o de cualquiera de los servicios, sin perjuicio de lo que se hubiera dispuesto al respecto en las correspondientes Condiciones Particulares.</p>
+
+<h5><strong>7. LEY Y JURISDICCIÓN</strong></h5>
+<p style="color: #000000; font-size: 11px;">Todas las cuestiones relativas al portal se rigen por las leyes de los Estados Unidos Mexicanos y se someten a la jurisdicción de los juzgados y tribunales competentes de los Estados Unidos Mexicanos.</p>
+<p style="color: #000000; font-size: 11px;">WeeSpare cooperará con las autoridades para cualquier caso en que los avisos violen la ley. En cuyo caso, la identidad de los anunciantes o compradores podrán ser determinadas mediante, por ejemplo el ISP. De igual forma, las direcciones IP pueden ser registradas con la finalidad de asegurar el cumplimiento de los términos y condiciones definidas para este servicio.</p>
+
+<h5 id="privacidad"><strong>9. AVISO DE PRIVACIDAD PARA LA PROTECCIÓN DE DATOS PERSONALES</strong></h5>
+<p style="color: #000000; font-size: 11px;">En virtud de lo regulado por la Ley Federal de protección de datos personales en posesión de los particulares, publicada en el Diario Oficial de la Federación en 5 de julio de 2010 en los Estados Unidos Mexicanos, el presente documento tiene por objeto hacer de conocimiento la política de privacidad y protección de datos personales de WeeSpare con domicilio en Morelos 24, Ocotlán Tlaxcala, Mexico.</p>
+<p style="color: #000000; font-size: 11px;">Los usuarios y/o Compradores reconocen y aceptan que en virtud de las actividades comerciales a las que se dedica WeeSpare es factible la solicitud de información personal así como el uso de dicha información. La responsabilidad en la veracidad de los datos introducidos es exclusiva del Usuario y/o Comprador, por lo que en caso de haber facilitado algún dato falso, WeeSpare se reserva el derecho de negar el acceso al usuario. Los datos de caracter personal que introduzca el Usuario y/o Comprador serán objeto de tratamiento automatizado para su almacenamiento en la base de datos de WeeSpare. En virtud de las políticas de Privacidad, WeeSpare se compromete con los Usuarios a proteger y mantener en estricta confidencialidad los datos que los Usuarios y/o Compradores Suministren.</p>
+<p style="color: #000000; font-size: 11px;">En los formularios donde se recaben datos de carácter personal, se señalarán los distintos campos cuya complementación es necesaria para realizar el registro correspondiente. Así, salvo que se indique lo contrario, las respuestas a las preguntas sobre datos personales son voluntarias, sin que la falta de contestación a dichas preguntas implique una merma en la calidad o cantidad de los servicios correspondientes, a menos que se indique otra cosa.</p>
+<p style="color: #000000; font-size: 11px;"></p>
+<p style="color: #000000; font-size: 11px;">Con la utilización del formulario de registro, el usuario está consciente de que los datos personales relativos a su nombre y apellido, e-mail y número de teléfono, serán comunicados al anunciante para posibilitar el contacto y poder informarle sobre características, condiciones y cualquier otra información que sea de su interés, relativa al producto o servicio seleccionado. Esta circunstancia le quedará debidamente advertida y en cualquier momento podrá ejercer sus derechos de acceso, rectificación, cancelación u oposición, dirigiéndose al anunciante en la dirección que figura consignada en la parte inferior de la publicación del producto o servicio.</p>
+<p style="color: #000000; font-size: 11px;">También serán objeto de cesión toda aquella otra información que el usuario desee incluir en el mensaje, con la única finalidad de realizar el contacto necesario para una posible transacción. Se entiende por anunciante toda aquella persona física o moral que oferte todo tipo de producto o servicio en la aplicación. Ningún tercero ajeno a WeeSpare podrá acceder, sin el consentimiento expreso del usuario, a ningún otro tipo de dato de carácter personal.</p>
+<p style="color: #000000; font-size: 11px;">También serán utilizados para la gestión, administración, prestación	  y mejora de los servicios a los que decida el usuario suscribirse o utilizar, por ejemplo a título enunciativo, y en ningún caso limitativo o excluyente:</p>
+
+<ol style="color: #000000; font-size: 11px;">
+ 	<li>En el caso que se haya suscrito a la recepción de boletines informativos, sus datos solo serán utilizados para gestionar el envío de dicho boletín.</li>
+ 	<li>En el caso del envío de publicidad, sus datos solo serán utilizados para gestionar el envío de publicidad a través de medios electrónicos, además de telefonía móvil. En este caso declaramos que podemos enviar publicidad tanto propia como de terceras empresas, relativa a los productos y servicios que le interesen de acuerdo a sus intereses seleccionados dentro de WeeSpare.</li>
+ 	<li>Al responder a algún tipo de promoción o concurso.</li>
+ 	<li>Al insertar algún anuncio con la necesidad de datos que esto implica.</li>
+</ol>
+<p style="color: #000000; font-size: 11px;">Los datos que nos facilita el usuario podrán ser publicados en la sección de Servicios/Productos/Proveedores de WeeSpare, o sitios afiliados a WeeSpare.</p>
+<p style="color: #000000; font-size: 11px;">Los datos que se proporcionen a travez del formulario de contacto de la web como e-mail, serán utilizados exclusivamente para atender consultas, dudas, sugerencias, comentarios que se planteen por este medio.</p>
+<p style="color: #000000; font-size: 11px;">Cuando sea el usuario quien facilite información de un tercero ya sea para compartir informacion sobre una publicacion o por cualquier otro motivo será el usuario el responsable de haber obtenido el consentimiento de la persona, y de los datos facilitados de la misma.</p>
+<p style="color: #000000; font-size: 11px;">Cada usuario, como usuario titular de los datos personales, podrá, en los términos y las limitaciones establecidos por la normativa vigente, cancelar tus datos a través de los siguientes medios:</p>
+
+<ol style="color: #000000; font-size: 11px;">
+ 	<li>E-mail a soporte@estrategiamovilmx.com, indicando en el titulo "BAJA REGISTRO INTERNET".</li>
+</ol>
+<p style="color: #000000; font-size: 11px;">En el correo deberá indicar:</p>
+
+<ol style="color: #000000; font-size: 11px;">
+ 	<li>La dirección de e-mail con la cual figura su alta en nuestra base de datos.</li>
+ 	<li>La contraseña que utiliza para acceder a la aplicación WeeSpare.</li>
+ 	<li>Fotocopia de Credencial de Elector, en el caso de ser usuario de nacionalidad mexicana, o fotocopia de pasaporte, en el caso de ser usuario de otra nacionalidad.</li>
+ 	<li>Dirección postal.</li>
+ 	<li>Teléfono de contacto.</li>
+</ol>
+<p style="color: #000000; font-size: 11px;">La entrega de los datos de carácter personal a través del proceso de registro de WeeSpare, supone la autorización expresa del usuario para realizar el tratamiento señalado en los párrafos anteriores. No obstante, si no desea que sus datos de carácter personal proporcionados sean tratados con fines comerciales y para el envío de publicidad propia o de terceros de los sectores mencionados, podrá oponerse mediante correo electrónico a la direccion mencionada. Para efectos de dejar de recibir ofertas el usuario tiene la posibilidad de desactivarlas en la seccion de Ajustes dentro de WeeSpare.</p>
+<p style="color: #000000; font-size: 11px;">El sitio oficial y la aplicación movil de WeeSpare garantizan la confidencialidad de los datos de carácter personal. No obstante, revelará a las autoridades públicas competentes los datos personales, y cualquier otra información que esté en su poder o sea accesible a través de sus sistemas, y sea requerida de conformidad con las disposiciones legales y reglamentarias aplicables al caso. Los datos de carácter personal podrán ser conservados en los archivos de titularidad de WeeSpare, incluso una vez finalizadas las relaciones formalizadas a través del portal, exclusivamente a los fines indicados anteriormente y, en todo caso, durante los plazos legalmente establecidos, a disposición de autoridades administrativas o judiciales.</p>
+<p style="color: #000000; font-size: 11px;"></p>
+<p style="color: #000000; font-size: 11px;"></p>
+<p style="color: #000000; font-size: 11px;"></p>
+<p style="color: #000000; font-size: 11px;"></p>
+<p style="color: #000000; font-size: 11px;">La aceptación de las condiciones de uso y política de privacidad, ligada al uso de cualquiera de los servicios de WeeSpare, implica la autorización expresa en favor de WeeSpare para el envío de información comercial y/o publicitaria al domicilio, teléfono móvil y dirección de e-mail del usuario. Dicha autorización comprende el envío de publicidad comercial y publicitaria relacionada con las actividades, productos y servicios de WeeSpare y portales relacionados con esta web, así como de terceros y sus portales.</p>
+<p style="color: #000000; font-size: 11px;">Cuando el usuario desee cancelar dicha autorización podrá hacerlo mediante una solicitud por correo electronico a la direccion soporte@estrategiamovilmx.com.</p>
+
+<h5><strong>10. CONDICIONES GENERALES DE CONTRATACIÓN DEL SERVICIO DE ANUNCIOS</strong></h5>
+<h6>10.1. Condiciones Generales de Contratación</h6>
+<p style="color: #000000; font-size: 11px;">10.1.1. El presente documento tiene por objeto establecer las Condiciones Particulares de Uso y Contratación Online del Servicio Anuncios (en adelante el Servicio) prestado por Germán Rosete Peña (WeeSpare) en el portal de internet estrategiamovilmx.com</p>
+<p style="color: #000000; font-size: 11px;">10.1.2. La utilización y contratación del Servicio supone y expresa la adhesión y aceptación expresa del Anunciante a las presentes Condiciones Particulares de Uso y Contratación vía online del Servicio así como a las Condiciones Generales de Uso de estrategiamovilmx.com, constituyendo ambos documentos las Condiciones Generales de Contratación que regirán la relación formalizada entre el Anunciante y WeeSpare, en adelante las CONDICIONES GENERALES DE CONTRATACIÓN.</p>
+<p style="color: #000000; font-size: 11px;">10.1.3. En caso de discrepancia entre las Condiciones Generales de Uso de estrategiamovilmx.com y las Condiciones Particulares de Uso y Contratación vía Online del Servicio Anuncios será de aplicación lo establecido en el presente documento.</p>
+
+<h6>10.2. Descripción del Servicio</h6>
+<p style="color: #000000; font-size: 11px;">10.2.1. El Servicio consiste en la inserción de anuncios en las ediciones en línea de WeeSpare. El Servicio incluye, asimismo, la posibilidad de renovación consecutiva de los avisos publicados en las diferentes ediciones en línea de WeeSpare.</p>
+<p style="color: #000000; font-size: 11px;">10.2.2. El portal se reserva el derecho a difundir o permitir la difusión en terceros portales, total o parcialmente, de los anuncios del anunciante, así como en otros sitios web, tales como agregadores, redes sociales o blogs, aceptando el anunciante dicha condición y siempre con el objetivo de dar mayor difusión a los contenidos.</p>
+
+<h6>10.3. Modalidades del Servicio</h6>
+<p style="color: #000000; font-size: 11px;">10.3.1. Publicaciones: Modalidad del servicio para Anunciantes particulares. Permite insertar la publicación semanal de forma gratuita. El anuncio se publicará inmediatamente en WeeSpare.</p>
+
+<h6>10.4. Procedimiento de Contratación del Servicio</h6>
+<p style="color: #000000; font-size: 11px;">10.4.1. Registro como usuario de WeeSpare, para insertar y renovar Publicaciones el anunciante ha de completar, una única vez, el registro de usuarios. Una vez completado WeeSpare le enviará un e-mail de confirmación.</p>
+<p style="color: #000000; font-size: 11px;">10.4.2. A partir de ese momento los datos del anunciante quedarán registrados y podrá poner y renovar Publicaciones con tan solo identificarse. Una vez registrado, cada vez que acceda al área <strong>Iniciar Sesión</strong> le solicitaremos su dirección de e-mail y su clave de acceso para proceder a la inserción o renovación de publicaciones.</p>
+<p style="color: #000000; font-size: 11px;">10.4.4. Medios Técnicos puestos a disposición del anunciante para identificar y corregir errores en la introducción de datos. Cuando el usuario lo desee podrá modificar sus datos de registro utilizando para ello la pestaña de <strong>Mi Cuenta</strong>en la aplicación.</p>
+
+<h6>10.5. Normas de Publicación</h6>
+<p style="color: #000000; font-size: 11px;">Con carácter general, la publicación de Anuncios es Gratis en WeeSpare estará sujeta a las siguientes reglas.</p>
+
+<h6>10.6. Limitación de la Responsabilidad</h6>
+<p style="color: #000000; font-size: 11px;">10.6.1. El anunciante reconoce y acepta que la responsabilidad máxima de WeeSpare frente al anunciante que pudiera derivarse de la inserción de anuncios en WeeSpare y en cualquiera de sus sitios web. Si WeeSpare no insertara el anuncio en las fechas previstas, si el anuncio no fuera insertado en la forma y términos acordados, ya sea por razones técnicas o de cualquier otro tipo, o por cualquier otra causa, queda limitada a la reinserción del anuncio con posterioridad en una posición semejante.</p>
+<p style="color: #000000; font-size: 11px;">10.6.2. En ningún caso WeeSpare responderá por otro tipo de daños, ya sean efectivos, indirectos o de cualquier otro tipo, ni por el lucro cesante que hubiera podido sufrir el anunciante por la falta de publicación puntual y/o correcta de cualquier anuncio.</p>
+<p style="color: #000000; font-size: 11px;">10.6.3. WeeSpare no responderá por los retrasos, publicación errónea ni por la falta de la publicación del anuncio que sean consecuencia de hechos o circunstancias que estén fuera de su control, incluido, a título enunciativo y no limitativo, acción gubernativa, incendio, inundación, insurrección, terremoto, fallo técnico, motín, explosión, embargo, huelga legal o ilegal, escasez de personal o de material, interrupción del transporte de cualquier tipo, retraso en el trabajo, o cualquier otra circunstancia fuera del control de WeeSpare.</p>
+
+<h6>10.7. Declaraciones y garantías del Anunciante/Indemnizaciones</h6>
+<p style="color: #000000; font-size: 11px;">10.7.1. La inserción de anuncios en la aplicacion WeeSpare se efectúa en consideración a las presentes declaraciones y garantías que efectúa el anunciante.</p>
+<p style="color: #000000; font-size: 11px;">10.7.2. Que el anunciante tiene derecho a publicar el contenido del anuncio, sin que ello infrinja la Ley y ningún derecho de terceros, incluyendo los derechos de propiedad industrial e intelectual. Será responsabilidad del anunciante obtener todas las autorizaciones, públicas o privadas, y efectuar todos los pagos por la utilización de los derechos de propiedad intelectual e industrial que se contengan en el anuncio. El anunciante declara conocer que WeeSpare ha aceptado efectuar la inserción del anuncio sobre la base de la presente declaración y garantía.</p>
+<p style="color: #000000; font-size: 11px;">10.7.3. Que el anunciante, así como el anuncio, su contenido y cualquier material del anunciante a que puedan acceder los usuarios de WeeSpare a través del anuncio, cumplen las normas vigentes sobre publicidad, incluida la efectuada por medios electrónicos y en línea, así como cualquier otra normativa aplicable, y, en especial, la relativa a telecomunicaciones, protección de consumidores y usuarios, derecho al honor, a la intimidad y a la propia imagen, y protección del menor y de la infancia.</p>
+<p style="color: #000000; font-size: 11px;">10.7.4. Que la inclusión del anuncio en la Aplicación Móvil WeeSpare o en cualquiera de los sitios web no supone el incumplimiento ni la violación de ninguna obligación legal y/o contractual asumida por el anunciante con terceras personas.</p>
+<p style="color: #000000; font-size: 11px;">10.7.5. Que el anunciante será el único responsable, frente a los usuarios de WeeSpare y terceras personas del texto e información contenidas en el anuncio. Así, a título enunciativo y en ningún caso limitativo, WeeSpare no será responsable, ni directa, ni indirecta ni subsidiaria, de los daños y perjuicios de cualquier naturaleza que puedan derivarse para los usuarios de WeeSpare y/o terceras personas de la falta de veracidad, exactitud y/o autenticidad, legalidad de los datos o informaciones contenidos en el anuncio insertado.</p>
+<p style="color: #000000; font-size: 11px;">10.7.6. El anunciante reconoce y acepta que cualquier relación contractual o extracontractual que, en su caso, formalice con usuarios de WeeSpare o terceras personas contactadas a través de estrategiamovilmx.com, se entienden realizados única y exclusivamente entre el anunciante y el usuario de WeeSpare y/o la tercera persona. En consecuencia, el anunciante acepta que WeeSpare no tiene ningún tipo de responsabilidad, ni directa, ni indirecta ni subsidiaria, sobre los daños o perjuicios de cualquier naturaleza ocasionados a los usuarios de WeeSpare y/o terceras personas con motivo de las negociaciones, conversaciones y/o relaciones contractuales o extracontractuales que estos formalicen con el anunciante.</p>
+<p style="color: #000000; font-size: 11px;">10.7.7. En cualquier caso, el anunciante accede a indemnizar a WeeSpare, inmediatamente que sea requerido para ello, de todos los gastos, costes, perjuicios y pérdidas de cualquier tipo (incluyendo honorarios de abogados y procuradores, aunque su intervención no sea preceptiva) en que incurra WeeSpare como consecuencia de cualquier reclamación, efectiva o inminente, de cualquier tipo, relativa a la publicación o comunicación al público del anuncio o de su contenido, incluyendo las basadas en violación de derechos de propiedad industrial o intelectual, calumnia, difamación, incumplimiento de deber de confidencialidad, revelación de secretos, incumplimiento de cualquier deber legal o reglamentario y/o de publicidad ilícita, falsa o engañosa.</p>
+
+<h6>10.8. Derecho a rechazar el anuncio por WeeSpare</h6>
+<p style="color: #000000; font-size: 11px;">10.8.1. WeeSpare no se obliga a revisar previamente el contenido de ningún anuncio. Cualquier revisión o aprobación efectuada por WeeSpare no debe entenderse como aceptación de que dicho anuncio cumple los términos de las CONDICIONES GENERALES DE CONTRATACIÓN.</p>
+<p style="color: #000000; font-size: 11px;">10.8.2. WeeSpare se reserva el derecho, ejercitable en cualquier momento y de modo discrecional, a:</p>
+<p style="color: #000000; font-size: 11px;">10.8.2.1. Rechazar cualquier anuncio, la orden de inserción de anuncios, o compromiso de ubicación.</p>
+<p style="color: #000000; font-size: 11px;">10.8.2.2. Eliminar cualquier anuncio clasificado del Directorio WeeSpare o de cualquier página del grupo.</p>
+
+<h6>10.9. Varios</h6>
+<p style="color: #000000; font-size: 11px;">10.9.1. WeeSpare se reserva el derecho a efectuar las modificaciones que estime oportunas en las CONDICIONES GENERALES DE CONTRATACIÓN, así como los precios del servicio señalados en la cláusula segunda del presente Documento.</p>
+<p style="color: #000000; font-size: 11px;">10.9.2. Los precios del servicio para cada una de las modalidades serán los establecidos en la última versión publicada en estrategiamovilmx.com del presente documento y serán válidos durante el tiempo que los permanezcan accesibles al usuario.</p>
+<p style="color: #000000; font-size: 11px;">10.9.3. Con carácter general, WeeSpare informa al anunciante que no archivará el documento electrónico en el que se formalice la contratación del servicio. Asimismo le informa que el Procedimiento de Contratación del Servicio y todos los documentos contractuales que regirán la relación formalizada se realizarán en lengua española.</p>
+<p style="color: #000000; font-size: 11px;">10.10.4. Las CONDICIONES GENERALES DE CONTRATACIÓN que han de regir la relación entre WeeSpare y el anunciante serán de aplicación desde el inicio del Procedimiento de Contratación Online del Servicio señalado en el presente documento hasta la finalización del plazo de tiempo por el que ha sido contratada la inserción del anuncio en cualquiera de las ediciones de WeeSpare.</p>
+
+<h5><strong>11. LEY APLICABLE Y JURISDICCIÓN COMPETENTE</strong></h5>
+<p style="color: #000000; font-size: 11px;">11.1. Todas las cuestiones relativas a la utilización y contratación del servicio se rigen por las leyes de los Estados Unidos Mexicanos y se someten a la jurisdicción de los juzgados y tribunales competentes de la Ciudad de México.</p>
+
+<h5><strong>12. PRODUCTOS Y SERVICIOS DE TERCERAS EMPRESAS</strong></h5>
+<p style="color: #000000; font-size: 11px;">El usuario acepta que al pulsar en cualquier enlace que le dirija a sitios o portales de internet de empresas controladoras, afiliadas o subsidiarias de WeeSpare, o de terceros, deja de navegar en esta web, por lo que dicho usuario acepta que WeeSpare no será responsable de cualquier daño o perjuicio que se le pudiera causar derivado de la visualización y carga de elementos de esos sitios o portales de internet, o por la contratación de cualquier tipo de servicio o adquisición de productos derivado de su acceso a dichos sitios o portales de internet. Esta Aplicacion Móvil tiene como finalidad servir al público en general mediante la venta y colocación de espacios publicitarios.</p>
+<p style="color: #000000; font-size: 11px;">WeeSpare, sus editores, empleados, funcionarios y consultores no intervienen ni reciben comisiones sobre las transacciones que realizan aquellos que se anuncian en esta web con terceros, ni son responsables de la información o contenido proporcionado por los anunciantes, ni por los errores u omisiones de impresión, tipografía, fotografía, entre otros, que estos incluyan, ni se dedican de manera alguna a la comercialización al mayoreo o menudeo de cualquier clase de bienes o servicios. WeeSpare, sus editores, empleados, funcionarios y consultores se reservan el derecho de no publicar ni aceptar publicidad que pueda afectar a esta web, a los anuncios en ésta o a los fines que persigue, así como el derecho de suspender o aplazar la publicación de cualquiera de estos anuncios.</p>
+       ]]></string>
+
+    <!--Dialogs-->
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancelar</string>
+
+
+</resources>

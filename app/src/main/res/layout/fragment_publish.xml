@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:background="@android:color/white"
+             app:layout_behavior="@string/appbar_scrolling_view_behavior"
+             tools:context="estrategiamovil.comerciomovil.ui.fragments.PublishFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_width="match_parent" android:visibility="gone"
+            android:id="@+id/layout_loading" android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+        <ProgressBar
+                android:paddingTop="16dp"
+            android:id="@+id/pbLoading_publish"
+                android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+            <TextView
+                android:padding="16dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/prompt_loading_publish"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent" android:visibility="visible"
+            android:layout_height="match_parent"
+            android:id="@+id/general_container">
+        <!-- Images list horizontal-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/list_images"
+            android:layout_height="120dp"
+            android:background="@color/gray_ligth"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/list_new_publish_images"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        android:scrollbars="horizontal"
+                        android:fadeScrollbars="true"
+                        android:scrollbarSize="4dp"
+                        android:background="@color/gray_ligth"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/button_add_picture"
+                            android:layout_width="@dimen/publish_item_image_size"
+                            android:layout_height="@dimen/publish_item_image_size"
+                            android:src="@drawable/ic_add_a_photo"
+                            android:background="@drawable/rounded_border_button"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin1"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin1"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin1"
+                            />
+                        <TextView
+                            android:text="@string/text_add_photos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:textColor="@color/negro"
+                            android:gravity="center"
+                            android:tag="@string/label"
+                            android:textAppearance="?android:textAppearanceMedium"/>
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/list_images"
+            android:background="@color/gray_ligth" />
+
+
+
+
+        <!-- Form-->
+        <LinearLayout
+            android:id="@+id/publish_form"
+            android:layout_below="@id/divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!-- Type publication-->
+            <LinearLayout
+                android:id="@+id/layout_type_publication"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:padding="8dp">
+
+                    <Switch
+                        android:id="@+id/switch_type_publication"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_type_publication_title"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray"
+                            android:text="@string/text_promt_type_publication"
+                            />
+                        <TextView
+                            android:id="@+id/text_type_publication_selected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:text="@string/text_promt_type_ads"
+                            />
+
+                    </LinearLayout>
+
+
+            </LinearLayout><!--type -->
+            <View
+                android:id="@+id/divider_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/layout_type_publication"
+                android:background="@color/gray_ligth" />
+
+            <!-- Titulo publicacion-->
+            <LinearLayout
+                android:id="@+id/layout_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="vertical">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/text_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/text_promt_cover"
+                    app:met_textColorHint="@color/gray"
+                    android:inputType="textCapSentences"
+                    app:met_floatingLabel="highlight"
+                    android:nestedScrollingEnabled="true"
+                    android:maxLines="2"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    app:met_checkCharactersCountAtBeginning="false"
+                    app:met_maxCharacters="60"
+                    app:met_baseColor="@color/negro"
+                    app:met_primaryColor="@color/colorPrimaryDark"
+                    app:met_errorColor="@color/colorPrimaryDark"
+                    app:met_floatingLabelAlwaysShown="true"
+                    />
+            </LinearLayout>
+
+            <!-- CategoryViewModel-->
+            <LinearLayout
+                android:id="@+id/layout_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="8dp"
+                android:weightSum="50"
+                android:background="?android:attr/selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="40">
+                    <TextView
+                        android:id="@+id/form_category_title"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_category"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:id="@+id/text_category"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_select_category"
+                        android:textColor="@color/negro"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_keyboard_arrow_right"
+                    android:tint="@color/gray"/>
+
+            </LinearLayout><!--categoryViewModel -->
+            <View
+                android:id="@+id/divider_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_ligth" />
+            <!--Detail product -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/text_promt_product_title"
+                    />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:useDefaultMargins="true"
+                    >
+
+                   <!-- <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/text_percentageOff"
+                        android:animateLayoutChanges="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_promt_percentageOff"
+                        android:inputType="numberDecimal"
+                        app:met_textColorHint="@color/gray"
+                        app:met_floatingLabel="highlight"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:met_baseColor="@color/negro"
+                        app:met_primaryColor="@color/colorPrimaryDark"
+                        app:met_errorColor="@color/colorPrimaryDark"
+                        app:met_floatingLabelAlwaysShown="true"
+                        /> -->
+                    <!-- Prioridad -->
+
+
+                    <LinearLayout android:id="@+id/layout_percentageOff"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_promt_percentageOff"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimaryDark"/>
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_percentageOff"
+                            android:entries="@array/percentages" />
+                    </LinearLayout>
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/text_availability"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_promt_availibility"
+                        app:met_textColorHint="@color/gray"
+                        android:inputType="number"
+                        app:met_floatingLabel="highlight"
+                        android:maxLines="1"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:singleLine="true"
+                        app:met_baseColor="@color/negro"
+                        app:met_primaryColor="@color/colorPrimaryDark"
+                        app:met_errorColor="@color/colorPrimaryDark"
+                        app:met_floatingLabelAlwaysShown="true"
+                        />
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/text_regular_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:met_textColorHint="@color/gray"
+                        android:hint="@string/text_promt_regular_price"
+                        android:inputType="number"
+                        app:met_floatingLabel="highlight"
+                        android:maxLines="1"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:singleLine="true"
+                        app:met_baseColor="@color/negro"
+                        app:met_primaryColor="@color/colorPrimaryDark"
+                        app:met_errorColor="@color/colorPrimaryDark"
+                        app:met_floatingLabelAlwaysShown="true"
+                        />
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/text_offer_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:met_textColorHint="@color/gray"
+                        android:hint="@string/text_promt_offer_price"
+                        android:inputType="number"
+                        app:met_floatingLabel="highlight"
+                        android:maxLines="1"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:singleLine="true"
+                        app:met_baseColor="@color/negro"
+                        app:met_primaryColor="@color/colorPrimaryDark"
+                        app:met_errorColor="@color/colorPrimaryDark"
+                        app:met_floatingLabelAlwaysShown="true"
+                        />
+                </GridLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider_4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_ligth" />
+
+            <!--product type -->
+            <LinearLayout
+                android:id="@+id/layout_product_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:weightSum="50">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="40">
+                    <TextView
+                        android:id="@+id/form_product_type_title"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_product_type_title"
+                        android:textColor="@color/colorPrimaryDark"/>
+                   <LinearLayout
+                       android:layout_width="match_parent" android:orientation="horizontal"
+                       android:weightSum="100"
+                       android:layout_height="wrap_content">
+                       <RadioButton
+                           android:id="@+id/check_standard" android:checked="true"
+                           android:layout_width="match_parent" android:layout_weight="50"
+                           android:text="@string/text_product_type_standard"
+                           android:layout_height="wrap_content"/>
+                       <RadioButton
+                           android:id="@+id/check_virtual"
+                           android:layout_width="match_parent" android:layout_weight="50"
+                           android:text="@string/text_product_type_virtual"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+                   <TextView
+                       android:id="@+id/text_product_type_info"
+                       android:textColor="@color/gray"
+                       android:textAppearance="?android:attr/textAppearanceSmall"
+                       android:text="@string/text_product_type_standard_info"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Dinensiones del paquete: por el momento deshabilitado -->
+
+            <LinearLayout
+                android:id="@+id/layout_product_dimens"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:weightSum="50">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="40">
+                    <TextView
+                        android:id="@+id/form_product_dimen_title"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_product_dimen_title"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <LinearLayout
+                        android:layout_width="match_parent" android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_height="wrap_content">
+                       <EditText
+                           android:id="@+id/text_weight"
+                           android:layout_width="match_parent"
+                           android:hint="@string/text_product_weight"
+                           android:layout_weight="25"
+                           android:inputType="numberDecimal"
+                           android:textAppearance="?android:textAppearanceSmall"
+                           android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/text_heigth"
+                            android:layout_width="match_parent"
+                            android:hint="@string/text_product_heigth"
+                            android:layout_weight="25"
+                            android:inputType="number"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/text_long"
+                            android:layout_width="match_parent"
+                            android:hint="@string/text_product_long"
+                            android:layout_weight="25"
+                            android:inputType="number"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/text_wide"
+                            android:layout_width="match_parent"
+                            android:hint="@string/text_product_wide"
+                            android:layout_weight="25"
+                            android:inputType="number"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Shipping options -->
+            <LinearLayout
+                android:id="@+id/layout_shipping_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:weightSum="50">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="40">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_product_shipping_options"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <LinearLayout
+                        android:layout_width="match_parent" android:orientation="vertical"
+                        android:weightSum="100"
+                        android:layout_height="wrap_content">
+                        <!-- option 1 -->
+                        <LinearLayout
+                            android:id="@+id/layout_shipping_option_home"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/check_shipping_on_store"
+                                android:layout_width="match_parent"
+                                android:checked="true"
+                                android:text="@string/promt_shipping_on_store"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <!-- option 2 -->
+                        <LinearLayout
+                            android:id="@+id/layout_shipping_options"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/check_shipping_options"
+                                android:layout_width="match_parent"
+                                android:checked="false"
+                                android:clickable="false"
+                                android:text="@string/promt_shipping_all_options"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:text="@string/prompt_campaing_comming_soon"
+                                android:textColor="@color/gray"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_ligth" />
+
+
+            <!-- Location-->
+            <LinearLayout
+                android:id="@+id/layout_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="8dp"
+                android:weightSum="50"
+                android:background="?android:attr/selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="40">
+                    <TextView
+                        android:id="@+id/form_location_title"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_location_title"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:id="@+id/text_location"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prompt_location"
+                        android:textColor="@color/negro"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_keyboard_arrow_right"
+                    android:tint="@color/gray"/>
+
+            </LinearLayout><!--Location -->
+            <View
+                android:id="@+id/divider_6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_ligth" />
+            <!-- Date-->
+            <LinearLayout
+                android:id="@+id/layout_effective_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="8dp"
+                android:weightSum="50"
+                android:background="?android:attr/selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="40">
+                    <LinearLayout
+                        android:layout_width="match_parent" android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/form_effective_date_title"
+                            android:layout_width="wrap_content"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_promt_effective_date"
+                            android:textColor="@color/colorPrimaryDark"/>
+
+                        <TextView
+                            android:id="@+id/effective_date_additional_title"
+                            android:layout_width="wrap_content"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_promt_effective_date_ads"
+                            android:visibility="gone"
+                            android:textColor="@color/colorAccent"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/text_effective_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/negro"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:text="@string/text_promt_description"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_keyboard_arrow_right"
+                    android:tint="@color/gray"/>
+            </LinearLayout><!--date -->
+            <View
+                android:id="@+id/divider_7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_ligth" />
+            <!-- detailed description -->
+            <LinearLayout
+                android:id="@+id/layout_detailed_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="8dp"
+                android:weightSum="50"
+                android:background="?android:attr/selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="40">
+
+                    <TextView
+                        android:id="@+id/form_detailed_descr_title"
+                        android:layout_width="wrap_content"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_cover_extended"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                    <TextView
+                        android:id="@+id/text_detailed_description"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_description"
+                        android:textColor="@color/negro"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_keyboard_arrow_right"
+                    android:tint="@color/gray"/>
+
+            </LinearLayout>
+            <!--detailed description -->
+            <View
+                android:id="@+id/divider_8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_ligth" />
+            <!-- outstanding -->
+            <LinearLayout
+                android:id="@+id/layout_outstanding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="8dp"
+                android:weightSum="50"
+                android:background="?android:attr/selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="40">
+                    <TextView
+                        android:id="@+id/form_outstanding_title"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_description_title"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:id="@+id/text_outstanding"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_description"
+                        android:textColor="@color/negro"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_keyboard_arrow_right"
+                    android:tint="@color/gray"/>
+
+            </LinearLayout>
+            <!--outstanding  -->
+            <View
+                android:id="@+id/divider_9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_ligth" />
+            <!-- characteristics -->
+            <LinearLayout
+                android:id="@+id/layout_characteristics"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="8dp"
+                android:weightSum="50"
+                android:background="?android:attr/selectableItemBackground">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="40">
+                    <TextView
+                        android:id="@+id/form_characteristic_title"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_characterictics_title"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:id="@+id/text_characteristic"
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_description"
+                        android:textColor="@color/negro"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_keyboard_arrow_right"
+                    android:tint="@color/gray"/>
+
+            </LinearLayout>
+            <!--emergent  -->
+            <View
+                android:id="@+id/divider_10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_ligth" />
+            <!-- Emergent-->
+            <LinearLayout
+                android:id="@+id/layout_emergent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:clickable="true"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_emergent_title"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prompt_emergent_tip"
+                    android:textColor="@color/gray"/>
+                <Switch
+                    android:id="@+id/switch_emergent"
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:text="Emergent"
+                    android:textColor="@color/negro"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publish_form"
+            android:background="@color/gray_ligth"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_conditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:checked="true"
+                        />
+
+                    <TextView
+                        android:textColor="@color/negro"
+                        android:text="@string/text_button_conditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/text_conditions"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_button_conditions_2"
+                        android:autoLink="all"
+                        android:linksClickable="true"
+                        android:clickable="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/button_publish"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_button_publish"
+                android:textColor="@color/white"
+                android:background="@color/colorAccent"
+                android:foreground="?android:attr/selectableItemBackground"
+                />
+
+
+        </LinearLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

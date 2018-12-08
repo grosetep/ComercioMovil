@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="24dp"
+              android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/promt_tip_title"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/negro"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        >
+
+        <TextView
+            android:id="@+id/text_tip_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/negro"
+            android:text=""
+            />
+
+
+    </LinearLayout>
+
+
+    <CheckBox
+        android:id="@+id/checkbox_show_tip"
+        android:layout_width="match_parent"
+        android:textColorLink="@color/colorAccent"
+        android:text="No mostrar de nuevo"
+        android:textColor="@color/negro"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

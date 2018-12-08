@@ -1,0 +1,225 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar
+        android:id="@+id/pbLoading_address"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/principal_container_addresses"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1">
+
+            <!-- Calle Label -->
+                <EditText android:id="@+id/text_street"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:inputType="textCapWords"
+                          android:textAppearance="?android:textAppearanceSmall"
+                          android:maxLines="1"
+                          android:hint="@string/prompt_street"
+                          android:textColorHint="@color/gray"
+                          android:nextFocusDown="@+id/text_number_ext"/>
+
+            <!-- Numero y cp Label app:counterMaxLength="5"-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                    <EditText android:id="@+id/text_number_ext"
+                              android:layout_width="wrap_content"
+                              android:layout_weight="0.4"
+                              android:layout_height="wrap_content"
+                              android:inputType="number"
+                              android:maxLines="1"
+                              android:textColorHint="@color/gray"
+                              android:imeOptions="actionNext"
+                              android:textAppearance="?android:textAppearanceSmall"
+                              android:hint="@string/prompt_number_ext" />
+                    <EditText android:id="@+id/text_number_int"
+                              android:layout_width="wrap_content"
+                              android:layout_weight="0.3"
+                              android:layout_height="wrap_content"
+                              android:inputType="number"
+                              android:maxLines="1"
+                              android:textColorHint="@color/gray"
+                              android:imeOptions="actionNext"
+                              android:textAppearance="?android:textAppearanceSmall"
+                              android:hint="@string/prompt_number_int" />
+
+                    <EditText android:id="@+id/text_cp"
+                              android:layout_weight="0.3"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:inputType="number"
+                              android:maxLines="1"
+                              android:textColorHint="@color/gray"
+                              android:textAppearance="?android:textAppearanceSmall"
+                              android:hint="@string/prompt_cp"
+                              android:nextFocusForward="@+id/text_reference"/>
+            </LinearLayout>
+            <!-- Pais solo lectura -->
+
+                <EditText android:id="@+id/text_country"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:clickable="false"
+                          android:cursorVisible="false"
+                          android:focusable="false"
+                          android:focusableInTouchMode="false"
+                          android:isScrollContainer="true"
+                          android:text="México"
+                          android:textColorHint="@color/negro"
+                          android:hint="@string/prompt_country"
+                          android:textAppearance="?android:textAppearanceSmall"
+                    />
+
+
+            <!--                                    Estado label-->
+            <Spinner
+                android:id="@+id/spinner_city"
+                android:background="@drawable/custom_spinner_background"
+                android:spinnerMode="dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/spinner_city_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"/>
+            <!-- Referencia Label  app:counterMaxLength="100"-->
+
+            <EditText android:id="@+id/text_reference"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:inputType="textCapSentences"
+                      android:maxLines="1"
+                      android:textColorHint="@color/gray"
+                      android:textAppearance="?android:textAppearanceSmall"
+                      android:hint="@string/prompt_reference"
+                      android:nextFocusForward="@+id/text_location_alias"/>
+
+        <!-- alias Label app:counterMaxLength="8"-->
+
+            <EditText android:id="@+id/text_location_alias"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:inputType="textCapWords"
+                      android:maxLines="1"
+                      android:textColorHint="@color/gray"
+                      android:textAppearance="?android:textAppearanceSmall"
+                      android:hint="@string/prompt_location_alias" />
+            <!--                                Location-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="50">
+
+
+                    <EditText android:id="@+id/text_location_singup"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:inputType="textMultiLine"
+                              android:maxLines="3"
+                              android:textColor="@color/negro_semitransparente"
+                              android:enabled="false"
+                              android:isScrollContainer="true"
+                              android:textAppearance="?android:attr/textAppearanceSmall"
+                              android:hint="@string/prompt_location"
+                              android:layout_weight="40"
+                              android:textColorHint="@color/gray"
+                        />
+                <TextView
+                    android:id="@+id/text_location_ltd"
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+                <TextView
+                    android:id="@+id/text_location_lng"
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+                <ImageButton
+                    android:id="@+id/button_select_map"
+                    android:layout_width="@dimen/icon_layout__location_size"
+                    android:layout_height="@dimen/icon_layout__location_size"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/rounded_border_button"
+                    android:layout_gravity="right|bottom"
+                    android:src="@drawable/ic_map"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:id="@+id/button_remove_location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_action_minus"
+                android:background="@drawable/shape_icon_transparent"
+                />
+            <ImageButton
+                android:id="@+id/button_edit_location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_mode_edit"
+                android:tint="@android:color/holo_blue_light"
+                android:background="@drawable/shape_icon_transparent"
+                />
+            <ImageButton
+                android:id="@+id/button_save_location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_done"
+                android:tint="@android:color/holo_green_light"
+                android:background="@drawable/shape_icon_transparent"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_ligth"
+        android:layout_below="@+id/principal_container_addresses"/>
+
+</RelativeLayout>

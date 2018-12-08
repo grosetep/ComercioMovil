@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_update" android:title="@string/action_edit_title"
+          android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_edit_publication" android:title="@string/action_edit_publication"
+          android:orderInCategory="101" app:showAsAction="never" />
+    <item android:id="@+id/action_pause_publication" android:title="@string/action_pause_publication"
+          android:orderInCategory="102" app:showAsAction="never" />
+    <item android:id="@+id/action_activate_publication" android:title="@string/action_activate_publication"
+          android:orderInCategory="103" app:showAsAction="never" />
+    <item android:id="@+id/action_remove_publication" android:title="@string/action_remove_publication"
+          android:orderInCategory="104" app:showAsAction="never" />
+    <item android:id="@+id/action_response" android:title="@string/action_questions_reply"
+          android:orderInCategory="105" app:showAsAction="never" />
+</menu>

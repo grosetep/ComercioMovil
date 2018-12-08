@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context="estrategiamovil.comerciomovil.ui.fragments.SearchFragment">
+
+
+<ProgressBar
+    android:id="@+id/pbLoading_recommended"
+    android:visibility="invisible"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+
+   <LinearLayout
+    android:id="@+id/change_city_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="50">
+
+
+            <Spinner
+                android:id="@+id/spinner_city"
+                android:background="@drawable/custom_spinner_search"
+                android:spinnerMode="dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:layout_weight="40"
+               />
+
+        <ImageView
+            android:id="@+id/image_change_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:paddingRight="16dp"
+            android:layout_gravity="center"
+            android:tint="@color/colorPrimaryDark"
+            android:background="@color/white"
+            android:src="@drawable/ic_arrow_drop_down"
+            />
+
+            <TextView
+                android:id="@+id/spinner_city_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"/>
+</LinearLayout>
+
+<View
+    android:id="@+id/divider"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@+id/change_city_container"
+    android:background="@color/gray_ligth" />
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/cardList"
+    android:layout_below="@+id/divider"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:scrollbarThumbVertical="@drawable/scrolling"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="true"
+    android:scrollbarSize="4dp"
+    />
+
+<include layout="@layout/no_publications_layout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_centerInParent="true"
+         android:layout_below="@+id/divider"/>
+<include layout="@layout/no_connection_layout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_centerInParent="true"
+         android:layout_below="@+id/divider"/>
+</RelativeLayout>

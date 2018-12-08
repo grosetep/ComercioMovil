@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context="estrategiamovil.comerciomovil.ui.fragments.RatingFragment">
+
+<ProgressBar
+    android:id="@+id/pbLoading_rating"
+    android:visibility="invisible"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeRefresh_rating"
+        android:layout_below="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/recycler_rating"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:scrollbarThumbVertical="@drawable/scrolling"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="true"
+    android:scrollbarSize="4dp"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+<include layout="@layout/no_results_layout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_centerInParent="true"
+    />
+<include layout="@layout/no_connection_layout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_centerInParent="true"
+         />
+
+</RelativeLayout>

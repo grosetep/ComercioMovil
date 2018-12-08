@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--@drawable/side_nav_bar -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/gradient_blue_ligth"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_profile"
+        android:layout_width="@dimen/item_profile_size"
+        android:layout_height="@dimen/item_profile_size"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_account_circle"/>
+
+    <TextView
+        android:id="@+id/text_name_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="@string/text_user_guess"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+         />
+<!--android:textAppearance="@style/TextAppearance.AppCompat.Body1" -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_email_guess"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:id="@+id/text_email_user" />
+
+</LinearLayout>

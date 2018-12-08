@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "500379095246",
+    "firebase_url": "https://secret-heaven-148601.firebaseio.com",
+    "project_id": "secret-heaven-148601",
+    "storage_bucket": "secret-heaven-148601.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500379095246:android:89b2b4658892e99e",
+        "android_client_info": {
+          "package_name": "estrategiamovil.comerciomovil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500379095246-6qja7h75vrgivgppq2acetj7au34ku9j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "estrategiamovil.comerciomovil",
+            "certificate_hash": "D6B63F5593FA53B12A78DE43363C1D3442DA6D22"
+          }
+        },
+        {
+          "client_id": "500379095246-0l0gn245t3ks5i82ee2akh84nm8fqd6s.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "500379095246-8edj2ejroj5810oc9rdthmjm8nqm7n61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCifsgYSGvaupqLWVfFWCFinZupOTAa81k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500379095246-0l0gn245t3ks5i82ee2akh84nm8fqd6s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

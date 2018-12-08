@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context="estrategiamovil.comerciomovil.ui.fragments.MerchantListPublicationsFragment">
+
+<ProgressBar
+    android:id="@+id/pbLoading_merchant"
+    android:visibility="invisible"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/recycler_merchant_pubs"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:scrollbarThumbVertical="@drawable/scrolling"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="true"
+    android:scrollbarSize="4dp"/>
+
+<include layout="@layout/no_results_layout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_centerInParent="true"
+    />
+</RelativeLayout>
+
+
+

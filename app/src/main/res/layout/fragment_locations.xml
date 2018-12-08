@@ -1,0 +1,75 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/principal_container_addresses"
+          android:orientation="horizontal"
+          android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_address_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            />
+        <ImageButton
+            android:id="@+id/button_add_address"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/fab_add"
+            android:layout_alignRight="@+id/image_profile_signup"
+            android:layout_alignBottom="@+id/image_profile_signup"
+            android:background="@drawable/shape_icon_transparent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="16dp"
+            android:tint="@android:color/holo_green_light"
+            />
+    </LinearLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_ligth"
+        android:layout_below="@+id/principal_container_addresses"
+        />
+    <!-- Layout donde se agregan los formularios para direcciones -->
+    <ProgressBar
+        android:id="@+id/pbLoading_address"
+        android:visibility="invisible"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/divider"
+        android:layout_width="wrap_content"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_height="wrap_content" /><!--   android:layout_centerInParent="true"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/secondary_container_addresses"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:layout_below="@+id/divider"
+        />
+
+</RelativeLayout>

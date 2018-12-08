@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDobleDark">#01579B</color> <!-- 3F51B5  303F9F-->
+    <color name="colorPrimaryDark">#0288D1</color> <!-- 303F9F-->
+    <color name="colorAccent">#FF3D00</color> <!-- FF4081 -->
+
+    <!-- floating buttons-->
+    <color name="menu_shadowColor">#66000000</color>
+    <color name="negro_semitransparente">#B2000000</color>
+    <color name="negro_transparente">#33000000</color>
+    <color name="negro_label">#50000000</color>
+    <color name="white_label">#33FFFFFF</color>
+    <!-- Modify variable Constants.colorBackgroundAnimation-->
+    <color name="colorPrimary_transparente">#3303A9F4</color><!-- color Primary transparente-->
+    <color name="colorPrimaryDark_transparente">#330288D1</color><!-- color Primary transparente-->
+    <color name="colorPrimaryDobleDark_transparente">#3301579B</color><!-- color DobleDarkPrimary transparente-->
+
+    <color name="white">#fafafa</color>
+    <color name="white_semitransparent">#B2fafafa</color>
+    <color name="colorNormal">#FF3D00</color> <!-- FF4081 -->
+    <color name="colorPressed">#FF6E40</color> <!-- ff5a92 -->
+
+    <color name="colorClickable">#FF9E80</color> <!-- ff5a92 -->
+    <color name="colorClickableSecondary">#40C4FF</color> <!-- ff5a92 -->
+    <color name="colorTransparent">#00FFFFFF</color>
+
+    <color name="pink">#FF4081</color>
+    <color name="color_white_semitransparent">#FBFF1C</color><!--CCFF0000 -->
+    <color name="negro">#000000</color>
+    <color name="gray">#898989</color>
+    <color name="gray_ligth">#EBEBEB</color>
+
+    <!--swiperefreshlayout -->
+    <color name="s1">#FFBB33</color>
+    <color name="s2">#99CC00</color>
+    <color name="s3">#AA66CC</color>
+    <color name="s4">#33B5E5</color>
+</resources>

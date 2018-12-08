@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="estrategiamovil.comerciomovil">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <permission
+        android:name="estrategiamovil.comerciomovil.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="estrategiamovil.comerciomovil.permission.C2D_MESSAGE"/>
+
+    <permission
+        android:name="estrategiamovil.comerciomovil.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_final_2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppTheme"
+        tools:replace="android:label">
+        <activity
+            android:name=".ui.activities.StartActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.DetailPublicationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.CountryPreferencesActivity"
+            android:label="Buscar Pais..."
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".CountryPreferencesActivity"/>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <activity
+            android:name=".ui.activities.CategoryPreferencesActivity"
+            android:label="@string/title_activity_categories"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.CityPreferencesActivity"
+            android:label="Buscar Estado..."
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".CityPreferencesActivity"/>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <activity
+            android:name=".ui.activities.BeginActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+
+             com.google.android.maps.v2.API_KEY
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
+        <activity
+            android:name=".ui.activities.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".ui.activities.SignupActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Registro"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity
+            android:name=".ui.activities.LocationsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.ManagePublicationsActivity"
+            android:label="Mis Publicaciones"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.PublishActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Publicar Anuncio"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.SelectCategoryActivity"
+            android:label="Categorías principales"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.ShowImageActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.SelectSubCategoryActivity"
+            android:label="Todas las categorías"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SelectSubCategoryActivity"/>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <activity
+            android:name=".ui.activities.SelectLocationActivity"
+            android:label="Ubicaciones"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.SelectDetailedDescriptionActivity"
+            android:label="Descriptión producto/servicio"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.SelectOutstandingActivity"
+            android:label="Destacado"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.SelectCharacteristicsActivity"
+            android:label="Características"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.ShowConditionsActivity"
+            android:label="Terminos y Condiciones de Uso"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- [START firebase_service] -->
+        <service android:name=".notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+        <service android:name=".notifications.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- [END firebase_iid_service] -->
+        <activity android:name=".ui.activities.FCMPluginActivity"/>
+        <activity
+            android:name=".ui.activities.SearchByCategoryActivity"
+            android:label="Búscar en Todo"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.SearchBySubCategoryActivity"
+            android:label="Búsqueda avanzada"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ui.activities.SignOutActivity"/>
+        <activity
+            android:name=".ui.activities.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.FindMyBusinessActivity"
+            android:label="Asociados"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".FindMyBusinessActivity"/>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <activity
+            android:name=".ui.activities.ManageCustomersActivity"
+            android:label="Mis Clientes"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".ManageCustomersActivity"/>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <activity
+            android:name=".ui.activities.ReviewPayActivity"
+            android:label="Revisar y Pagar"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.SuscriptionActivity"
+            android:label="Mis Suscripciones"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.SettingsActivity"
+            android:label="Ajustes"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.PurchaseConfirmationActivity"
+            android:label="¡Felicitaciones!"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.CardActivity"
+            android:label="Ingresa los datos de tu tarjeta"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.StartMercadoPagoFlowActivity"
+            android:label="Medio de pago"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.FinalVaultActivity"
+            android:label="Pagar"
+            android:theme="@style/Theme.AppTheme"/>
+        <activity
+            android:name=".ui.activities.AdvancedVaultActivity"
+            android:label="Pagar"
+            android:theme="@style/Theme.AppTheme"/>
+        <activity
+            android:name=".ui.activities.SimpleVaultActivity"
+            android:label="Pagar"
+            android:theme="@style/Theme.AppTheme"/>
+        <activity
+            android:name=".ui.activities.PurchasesActivity"
+            android:label="Mis Compras"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.SalesActivity"
+            android:label="Mis Ventas"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.FavoritesActivity"
+            android:label="Favoritos"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.AdministratorActivity"
+            android:label="Administración"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.GalleryActivity"
+            android:theme="@style/AppTheme.Gallery"/>
+        <activity
+            android:name=".ui.activities.FilterActivity"
+            android:label="Búsqueda"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.MerchantPublicationsActivity"
+            android:label="Establecimientos"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.ReplyActivity"
+            android:label="Responder">
+        </activity>
+        <activity
+            android:name=".ui.activities.ProfileActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Editar Perfil"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name=".ui.activities.BusinessInfoActivity"
+            android:label="Información"
+            android:theme="@style/Theme.AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.activities.GetInfoBusinessActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.EditPublicationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Editar Publicación"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".ui.activities.SelectSubSubCategoryActivity"
+            android:label="Categorías especiales"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SelectSubSubCategoryActivity"/>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <activity
+            android:name=".ui.activities.UpgradeActivity"
+            android:label="Actualiza tu información"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.PublicationReviewsActivity"
+            android:label="Opiniones sobre el producto"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.AskResponseActivity"
+            android:label="Preguntas al vendedor"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.SendQuestionResponseActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.AdministratorPublicationsActivity"
+            android:label="Moderación de publicaciones"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.HelpActivity"
+            android:label="Ayuda"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.HelpLevelCategoriesActivity"
+            android:label="Ayuda"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.HelpContentActivity"
+            android:label="Ayuda"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.EditImagesActivity"
+            android:label="Modificar"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.ChangePasswordActivity"
+            android:label="Cambiar Contraseña"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.activities.VoucherActivity"
+            android:label="Comprobante de Pago"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context=".ui.activities.SuscriptionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/loading_subscription"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_subscription"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/appbar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/container">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/layout_user"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:visibility="gone" android:orientation="vertical"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/character"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo_landscape_normal"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="16dp"
+                    android:textAlignment="center"
+                    android:text="@string/text_signup_welcome"
+                    android:layout_gravity="center"/>
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/button_upgrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:textColor="@android:color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/rounded_border_button"
+                    android:text="@string/text_upgrade_to_subscriber"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/layout_suscriptor"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height= "match_parent">
+
+                <android.support.v7.widget.CardView
+                        android:id="@+id/layout_tip_1"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/card_margin"
+                        >
+                    <LinearLayout
+                        android:padding="8dp"
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/text_tip_announcement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/promt_suscription_tip_1"
+                            android:textColor="@color/colorAccent"
+                            android:padding="8dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_cupons"
+                    android:layout_below="@+id/layout_tip_1"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    card_view:cardCornerRadius="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/prompt_type_suscription_title"
+                            android:layout_marginLeft="16dp"
+                            android:paddingTop="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/prompt_fee_by_cupons"/>
+                        <!-- layout cupons-->
+                        <LinearLayout
+                            android:id="@+id/layout_cupons"
+                            android:layout_below="@+id/prompt_type_suscription_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <RadioButton
+                                android:id="@+id/radio_cupons"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_promt_cupons"
+                                android:checked="true"
+                                android:enabled="false"
+                                android:visibility="gone"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:layout_margin="8dp"
+                                />
+
+
+                            <LinearLayout
+                                android:id="@+id/layout_price_cupons"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:padding="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/percentage"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    style="@style/Base.TextAppearance.AppCompat.Large"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/promt_label_commision"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    style="@style/Base.TextAppearance.AppCompat.Large"
+                                    android:textStyle="bold"
+                                    android:textSize="30sp"
+                                    android:gravity="center"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/text_promt_sale"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    style="@style/Base.TextAppearance.AppCompat.Large"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:gravity="center"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!-- Term label-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:layout_below="@+id/layout_cupons"
+                            android:gravity="center">
+
+                            <!-- prices commissions -->
+                            <LinearLayout
+                                android:id="@+id/layout_price_cupons_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:padding="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Publicaciones gratuitas"
+                                    android:textColor="@color/colorPrimary"
+                                    style="@style/Base.TextAppearance.AppCompat.Large"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:gravity="center"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/text_cupons_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/negro"
+                                android:layout_marginBottom="8dp"/>
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_prices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_below="@+id/card_cupons"
+                    card_view:cardCornerRadius="3dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/campaing_title"
+                            android:layout_marginLeft="16dp"
+                            android:paddingTop="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/prompt_campaing_title"/>
+                        <TextView
+                            android:id="@+id/text_comming_soon"
+                            android:layout_marginLeft="16dp"
+                            android:paddingTop="16dp"
+                            android:layout_below="@+id/campaing_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/prompt_campaing_comming_soon"/>
+                            <!-- layout ads-->
+                            <LinearLayout
+                                android:id="@+id/layout_ads"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_below="@+id/text_comming_soon"
+                                android:gravity="center">
+
+                                <RadioButton
+                                    android:id="@+id/radio_ads"
+                                    android:enabled="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/text_promt_ad"
+                                    android:checked="false"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                    android:layout_margin="8dp"
+                                    />
+
+                                <LinearLayout
+                                    android:id="@+id/layout_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:padding="8dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/money_2"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        style="@style/Base.TextAppearance.AppCompat.Large"
+                                        android:textStyle="bold"
+                                        android:textSize="15sp"
+                                        android:gravity="center"
+                                        android:layout_gravity="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                                    <TextView
+                                        android:id="@+id/text_ads_price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="150"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        style="@style/Base.TextAppearance.AppCompat.Large"
+                                        android:textStyle="bold"
+                                        android:textSize="30sp"
+                                        android:gravity="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/text_promt_mes"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        style="@style/Base.TextAppearance.AppCompat.Large"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp"
+                                        android:gravity="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <!-- Term label-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:layout_below="@+id/layout_ads"
+                                android:gravity="center">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/text_promt_term"
+                                    android:textColor="@color/negro"
+                                    android:layout_marginBottom="8dp"/>
+                                <Spinner
+                                    android:id="@+id/spinner_term"
+                                    android:background="@drawable/custom_spinner_background"
+                                    android:spinnerMode="dialog"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    />
+                            </LinearLayout>
+
+
+                        <View
+                            android:id="@+id/division_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/layout_ads"
+                            android:background="@color/gray_ligth"
+                            />
+
+                    </RelativeLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_below="@+id/card_prices"
+                    card_view:cardCornerRadius="3dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/prompt_suscription_title"
+                            android:paddingTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/prompt_suscription_status_title"/>
+
+                        <LinearLayout
+                            android:id="@+id/layout_subscription_detail"
+                            android:layout_below="@+id/prompt_suscription_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/text_status"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/negro"
+                                android:textAppearance="?android:textAppearanceLarge"
+                                android:text="Campaña Activa"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:text="@string/text_promt_effective_date"/>
+
+                                <TextView
+                                    android:id="@+id/text_promt_effectiveDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/negro"
+                                    android:text="15 Noviembre 2016"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="8dp"
+                                android:weightSum="1">
+                                <SeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:max="30"
+                                    android:progress="10"
+                                    android:layout_weight="0.2"
+                                    android:id="@+id/seekBar"
+                                    />
+                                <TextView
+                                    android:id="@+id/text_days_active"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="10/30 Días restantes"
+                                    android:textAlignment="center"
+                                    android:gravity="end"
+                                    android:textColor="@color/negro"
+                                    android:layout_weight="0.8"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                              android:id="@+id/layout_button_expandable"
+                              android:layout_width="match_parent"
+                              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                              android:layout_height="match_parent"
+                              android:orientation="vertical"
+                              card_view:cardCornerRadius="3dp"
+                              android:layout_below="@+id/card_detail" android:clickable="true"
+                              android:layout_margin="6dp" android:background="?android:attr/selectableItemBackground"
+                              android:weightSum="50">
+                    <TextView
+                        android:id="@+id/text_benefits_title"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_weight="40"
+                        android:text="@string/prompt_benefits_title"/>
+
+                    <ImageButton
+                        android:id="@+id/button_display_benefits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_keyboard_arrow_down"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:drawableRight="@drawable/ic_keyboard_arrow_down"
+                        android:layout_marginRight="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        />
+
+                </android.support.v7.widget.CardView>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/container_benefits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_button_expandable"
+                    app:ael_duration="400"
+                    app:ael_expanded="false"
+                    app:ael_interpolator="accelerate"
+                    app:ael_orientation="vertical">
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/layout_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    card_view:cardCornerRadius="3dp">
+                <LinearLayout
+                    android:id="@+id/layout_advantage_ads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    style="@style/Widget.CardContent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/form_advantage_title_ads"
+                        android:layout_width="match_parent"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_advantage"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/negro"/>
+
+                    <!-- 1-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center_vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_1_ads"/>
+
+                    </LinearLayout>
+                    <!-- 2-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center_vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_2_ads"/>
+
+                    </LinearLayout>
+                    <!-- 3-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center_vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_3_ads"/>
+
+                    </LinearLayout>
+                    <!-- 4-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_4_ads"/>
+
+                    </LinearLayout>
+                    <!-- 5-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_5_ads"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_announcement_1"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_advantage_cupons"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.CardContent"
+
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/form_advantage_title_cupons"
+                        android:layout_width="match_parent"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/text_promt_advantage"
+                        android:textColor="@color/negro"/>
+
+                    <!-- 7-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center_vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_7"/>
+
+                    </LinearLayout>
+                    <!-- 8-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center_vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_8"/>
+
+                    </LinearLayout>
+                    <!-- 9-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center_vertical"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_9"/>
+
+                    </LinearLayout>
+                    <!-- 10-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_10"/>
+
+                    </LinearLayout>
+                    <!-- 5-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_5"/>
+
+                    </LinearLayout>
+                    <!-- 6-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_6"/>
+
+                    </LinearLayout>
+                    <!-- 11-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_11"/>
+
+                    </LinearLayout>
+                    <!-- 12-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_action_basket"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/negro"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/text_promt_advantage_12"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_announcement_2"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </LinearLayout>
+                </android.support.v7.widget.CardView>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/container_benefits"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true"
+                    android:padding="8dp">
+
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_pay_suscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_promt_pay_suscription"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        />
+                    <ProgressBar
+                        android:id="@+id/pbLoading_send_email"
+                        android:visibility="gone"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_init_login"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/promt_button_init_login"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:visibility="gone"
+                      android:id="@+id/begin_screen"
+            />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+
+

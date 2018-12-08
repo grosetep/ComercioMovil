@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context="estrategiamovil.comerciomovil.ui.fragments.ManageCustomersFragment">
+
+<ProgressBar
+    android:id="@+id/pbLoading_customers"
+    android:visibility="invisible"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/layout_predeterminated_message"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/negro"
+            android:text="@string/promt_predeterminated_message"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="50">
+
+            <EditText
+                android:id="@+id/edit_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/promt_message"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Su pedido ya está listo..."
+                android:textColor="@color/negro"
+                android:layout_weight="50"
+                android:enabled="false"
+                android:maxLength="42"
+                android:inputType="textCapSentences|textAutoCorrect" />
+            <ImageView
+                android:id="@+id/button_edit_message"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:tint="@color/colorPrimaryDark"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_edit"/>
+            <ImageView
+                android:id="@+id/button_done_message"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:tint="@android:color/holo_green_light"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_done"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/list"
+    android:layout_below="@+id/layout_predeterminated_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:scrollbarThumbVertical="@drawable/scrolling"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="true"
+    android:scrollbarSize="4dp"/>
+
+<include layout="@layout/no_results_layout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_centerInParent="true"
+         />
+</RelativeLayout>
+
+

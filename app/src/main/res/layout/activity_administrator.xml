@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context="estrategiamovil.comerciomovil.ui.activities.AdministratorActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/appbar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/container">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+
+
+                <LinearLayout
+                    android:id="@+id/layout_monitor_publications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:clickable="true" android:background="?android:attr/selectableItemBackground"
+                    android:weightSum="50"
+                    android:paddingTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="50"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:text="Monitoreo de Publicaciones"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:tint="@color/negro_semitransparente"
+                        android:src="@drawable/ic_keyboard_arrow_right"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Elimina usuario"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:background="@color/gray_ligth"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:id="@+id/id_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="id_user"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_delete_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Aprobar y Enviar Cupones de una compra"
+                    android:textColor="@color/colorAccent"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <EditText
+                        android:id="@+id/external_reference"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="external_reference"
+                        android:textColor="@color/negro"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/payment_type_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="payment_type_id"
+                        android:textColor="@color/negro"
+                        android:inputType="text"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="valores: ticket,atm,credit_card,debit_card,deposit_direct"
+                        android:textColor="@color/gray"/>
+
+                    <EditText
+                        android:id="@+id/payment_method_reference_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="payment_method_reference_id"
+                        android:textColor="@color/negro"
+                        android:inputType="number"/>
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_send_cupons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Enviar PushNotification"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:background="@color/gray_ligth"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <EditText
+                        android:id="@+id/text_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="title"
+                        android:maxLength="33"
+                        android:textColor="@color/negro"
+                        android:inputType="textCapSentences|textAutoCorrect"/>
+
+                    <EditText
+                        android:id="@+id/text_subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="subtitle"
+
+                        android:textColor="@color/negro"
+                        android:inputType="textCapSentences"/>
+                    <EditText
+                        android:id="@+id/text_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="message"
+                        android:maxLength="42"
+                        android:textColor="@color/negro"
+                        android:inputType="textCapSentences|textAutoCorrect"/>
+
+
+                    <EditText
+                        android:id="@+id/text_topic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="topic"
+                        android:textColor="@color/negro"
+                        android:inputType="text"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="valores: free_time,beauty,spa,services,gastronomy,health,technology,home,products, merchants"
+                        android:textColor="@color/gray"/>
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_send_notification"
+                        android:layout_width="match_parent"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:layout_height="wrap_content"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Elimina publicacion"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:id="@+id/text_id_publication"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="id_publication"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_delete_publication"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Consulta Ventas realizados de un Suscriptor"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:background="@color/gray_ligth"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:id="@+id/text_id_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="id_user"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_get_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Consulta Usuarios"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:id="@+id/text_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="name"
+                        android:textColor="@color/negro"
+                        android:inputType="text" />
+                    <EditText
+                        android:id="@+id/text_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="paterno"
+                        android:textColor="@color/negro"
+                        android:inputType="text" />
+                    <EditText
+                        android:id="@+id/text_last"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="materno"
+                        android:textColor="@color/negro"
+                        android:inputType="text" />
+                    <EditText
+                        android:id="@+id/text_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Compania"
+                        android:textColor="@color/negro"
+                        android:inputType="text" />
+                    <EditText
+                        android:id="@+id/text_user_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:textColor="@color/negro"
+                        android:inputType="textEmailAddress" />
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_get_users"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Confirma pago suscripción"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:background="@color/gray_ligth"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/text_reference_suscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="reference"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+                    <EditText
+                        android:id="@+id/text_days_patch_aggregate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="days_patch_aggregate"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+                    <EditText
+                        android:id="@+id/text_id_cost_suscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="id_cost_suscription"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="valores: 1:{1 mes,$150},3:{3 meses,$410},4:{6 meses,$790},5:{12 meses,$1,500}"
+                        android:textColor="@color/gray"/>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_notify_suscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Consulta pago de suscripción"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/text_reference_suscription_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="reference"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+                    <EditText
+                        android:id="@+id/text_id_user_suscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="id_user"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_get_suscription_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Consulta Compras por usuario"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:background="@color/gray_ligth"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:id="@+id/text_id_user_purchases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="id_user"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+                    <EditText
+                        android:id="@+id/text_date_from_purchases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Desde"
+                        android:textColor="@color/negro"
+                        android:singleLine="true"
+                        android:textColorHint="@color/gray"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:isScrollContainer="true"
+                        android:inputType="datetime" />
+                    <EditText
+                        android:id="@+id/text_date_to_purchases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Hasta"
+                        android:textColor="@color/negro"
+                        android:singleLine="true"
+                        android:textColorHint="@color/gray"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:isScrollContainer="true"
+                        android:inputType="datetime" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_get_purchases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Consulta Publicationes por usuario"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:id="@+id/text_id_suscriptor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="id_suscriptor"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+                    <EditText
+                        android:id="@+id/text_date_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Desde"
+                        android:textColor="@color/negro"
+                        android:singleLine="true"
+                        android:textColorHint="@color/gray"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:isScrollContainer="true"
+                        android:inputType="datetime" />
+                    <EditText
+                        android:id="@+id/text_date_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Hasta"
+                        android:textColor="@color/negro"
+                        android:singleLine="true"
+                        android:textColorHint="@color/gray"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:isScrollContainer="true"
+                        android:inputType="datetime" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_get_publications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <!-- Consulta detalle compra-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Consulta detalle compra"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:id="@+id/text_purchase_capture_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="línea de captura"
+                        android:textColor="@color/negro"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/text_date_from_detail_p"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Desde"
+                        android:textColor="@color/negro"
+                        android:singleLine="true"
+                        android:textColorHint="@color/gray"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:isScrollContainer="true"
+                        android:inputType="datetime" />
+                    <EditText
+                        android:id="@+id/text_date_to_detail_p"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Hasta"
+                        android:textColor="@color/negro"
+                        android:singleLine="true"
+                        android:textColorHint="@color/gray"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:isScrollContainer="true"
+                        android:inputType="datetime" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_detail_purchase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="Consulta detalle pago"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:background="@color/gray_ligth"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <EditText
+                        android:id="@+id/text_q_method_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Metodo de pago"
+                        android:textColor="@color/negro"
+                        android:inputType="number"/>
+                    <TextView
+                        android:text="1: Mercado Pago, 2: PayPal, 3: Directo en oxxo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray"
+                        />
+
+                    <EditText
+                        android:id="@+id/text_q_external_reference"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="external_reference"
+                        android:textColor="@color/negro"
+                        android:inputType="text"/>
+
+
+                    <EditText
+                        android:id="@+id/text_reference_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="reference_id"
+                        android:textColor="@color/negro"
+                        android:inputType="number"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enviar external_reference y reference_id para pagos:ticket. Enviar solo external reference para pagos TDC y deposito directo"
+                        android:textColor="@color/gray"/>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_get_payment_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/rounded_border_button"
+                        android:text="Aceptar"/>
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/text_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"/>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+

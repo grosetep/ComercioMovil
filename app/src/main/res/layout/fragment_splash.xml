@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/splash_screen"
+    android:background="@drawable/gradient">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:id="@+id/logo"
+        android:src="@mipmap/logo_normal_white"
+        android:layout_alignBottom="@+id/tip1_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/tip1_text"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/white"
+
+
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/app_message_splash"
+        android:layout_marginTop="24dp"
+        android:id="@+id/tip1_text2"
+        android:textColor="@android:color/white"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:layout_below="@+id/tip1_text"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+         />
+
+
+    <ProgressBar
+        android:id="@+id/loading_start"
+        android:layout_marginTop="24dp"
+        android:visibility="visible"
+        android:layout_below="@+id/tip1_text2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:indeterminate="true"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

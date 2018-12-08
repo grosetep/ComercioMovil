@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:id="@+id/loading"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:background="@color/gray_ligth"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_approved"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:tint="@android:color/holo_green_dark"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_promt_congrats_1"
+                android:textColor="@color/colorPrimaryDark"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_gravity="center|center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_promt_congrats_2"
+                android:textColor="@color/colorPrimaryDark"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_gravity="center|center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- alert-->
+    <LinearLayout
+        android:id="@+id/text_info_email_sent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:tint="@color/colorPrimaryDark"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_action_info"/>
+
+        <TextView
+            android:id="@+id/text_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/negro"
+            android:text="@string/text_promt_info_purchase_3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- info -->
+    <LinearLayout
+        android:layout_below="@+id/text_info_email_sent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_ligth" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:text="@string/text_promt_purchase_data_title"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp">
+            <!-- total -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:text="@string/text_promt_total_title"
+                android:layout_marginRight="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/text_total"
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/negro"/>
+        </LinearLayout>
+        <!-- Medio de pago -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_ligth" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp">
+            <!-- total -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:text="@string/text_promt_method_title"
+                android:textStyle="bold"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/text_method"
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:textColor="@color/negro"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_ligth" />
+        <!-- Operacion-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:text="@string/text_promt_operation_title"
+                android:layout_marginRight="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/text_operation"
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/negro"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_ligth" />
+        <!-- fecha-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:text="@string/ads_title_date_operation"
+                android:layout_marginRight="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/negro"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_ligth" />
+        <!-- receipt-->
+        <LinearLayout
+            android:id="@+id/layout_receipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:text="@string/promtp_title_generate_receipt"
+                android:layout_marginRight="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/promtp_generate_receipt"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_ligth" />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_purchases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_go_purchases"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="0dp"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"/>
+        <TextView
+            android:id="@+id/text_continue"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:text="@string/text_button_continue"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:clickable="true"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+</RelativeLayout>
